@@ -66,13 +66,19 @@
     }
 
     .image-column {
+      flex: 1;
+      min-width: 280px;
       display: flex;
       flex-direction: column;
       gap: 20px;
-      flex: 1;
-      min-width: 280px;
     }
 
+    .image-row {
+      display: flex;
+      gap: 20px;
+    }
+
+    .image-row img,
     .image-column img {
       width: 100%;
       border-radius: 10px;
@@ -80,7 +86,12 @@
       transition: transform 0.3s ease;
     }
 
-    .image-column img:hover {
+    .image-row img {
+      width: 48%;
+    }
+
+    .image-column img:hover,
+    .image-row img:hover {
       transform: scale(1.03);
     }
 
@@ -89,7 +100,11 @@
         flex-direction: column;
       }
 
-      .text-block, .image-column {
+      .image-row {
+        flex-direction: column;
+      }
+
+      .image-row img {
         width: 100%;
       }
     }
@@ -102,6 +117,7 @@
     <a href="life.html">Life</a>
   </nav>
 
+
   <!-- Photography Section -->
   <div class="section">
     <div class="text-block">
@@ -110,7 +126,7 @@
         I love photography—and being photographed. Exploring new places and capturing the beauty of life through a lens is my way of storytelling. It helps me slow down and appreciate the little moments that make life meaningful.
       </p>
     </div>
-    <div class="image-column">
+    <div class="image-row">
       <img src="photo1.jpg" alt="Photography 1" />
       <img src="photo2jpg.jpg" alt="Photography 2" />
     </div>
@@ -124,7 +140,7 @@
         I’ve been dancing on and off since kindergarten. Although I’m not a professional dancer, I always give my best on stage and strive to present every movement perfectly. In college, I focused on Chinese folk and ethnic dance, and I also spent some time learning jazz dance thanks to my mom. Eventually, I discovered my true passion—Latin dance. I love fast-paced rhythms that bring excitement and energy to both the dancer and the audience.
       </p>
     </div>
-    <div class="image-column">
+    <div class="image-row">
       <img src="dance1.jpg" alt="Dance 1" />
       <img src="dance2.jpg" alt="Dance 2" />
     </div>
