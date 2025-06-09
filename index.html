@@ -2,43 +2,131 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Riza Serik | Data Scientist</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Riza Serik | Portfolio</title>
   <style>
     body {
-      font-family: Arial, sans-serif;
-      background: #fdfdfd;
-      color: #333;
       margin: 0;
-      padding: 2rem;
-      max-width: 800px;
-      margin-left: auto;
-      margin-right: auto;
-    }
-    h1 {
-      font-size: 2.5rem;
+      font-family: sans-serif;
       color: #222;
     }
-    p {
-      font-size: 1.2rem;
-      line-height: 1.6;
+    nav {
+      background: #f7f7f7;
+      padding: 1rem;
+      display: flex;
+      justify-content: center;
+      gap: 2rem;
+      border-bottom: 1px solid #ddd;
     }
-    a {
-      color: #0366d6;
+    nav a {
       text-decoration: none;
+      color: #333;
+      font-weight: bold;
     }
-    a:hover {
-      text-decoration: underline;
+    section {
+      padding: 2rem;
+      max-width: 1000px;
+      margin: auto;
+    }
+    .intro {
+      display: flex;
+      gap: 2rem;
+      flex-wrap: wrap;
+    }
+    .intro img {
+      width: 200px;
+      height: 200px;
+      object-fit: cover;
+      border-radius: 50%;
+    }
+    .edu-work {
+      margin-top: 2rem;
+    }
+    h2 {
+      border-bottom: 2px solid #eee;
+      padding-bottom: 0.3rem;
+    }
+    .projects, .life {
+      display: grid;
+      gap: 1.5rem;
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    }
+    .card {
+      border: 1px solid #ddd;
+      border-radius: 8px;
+      padding: 1rem;
+      background: #fff;
+    }
+    .card h3 {
+      margin-top: 0;
     }
   </style>
 </head>
 <body>
-  <h1>Hi, I'm Riza Serik</h1>
-  <p>Welcome to my portfolio. I'm a Data Scientist with a background in economics and experience in NLP, machine learning, and financial modeling.</p>
-  <p>🔬 Master’s in Data Science @ UC Berkeley<br>
-     🎓 Bachelor’s in Economics @ Tsinghua University</p>
-  <p>📂 Explore my projects on <a href="https://github.com/Riza622" target="_blank">GitHub</a></p>
-  <p>📬 Contact: <a href="mailto:ryzsrk@outlook.com">ryzsrk@outlook.com</a></p>
+  <nav>
+    <a href="#about">About</a>
+    <a href="#work">My Work</a>
+    <a href="#life">My Life</a>
+  </nav>
+
+  <section id="about">
+    <div class="intro">
+      <div>
+        <h1>Hi, I'm Riza Serik</h1>
+        <p>I’m a data scientist with a background in economics and a passion for translating messy data into clear insights. I’ve worked on everything from machine learning models to policy analysis, and I’m always excited to tackle a new problem.</p>
+      </div>
+      <img src="your-photo.jpg" alt="Riza Serik">
+    </div>
+    <div class="edu-work">
+      <h2>Education</h2>
+      <ul>
+        <li>M.S. in Data Science, UC Berkeley</li>
+        <li>B.A. in Economics, Tsinghua University</li>
+      </ul>
+      <h2>Work</h2>
+      <ul>
+        <li>Data Analyst Intern @ Sharpen DTX</li>
+        <li>Investment Analyst Intern @ Private Equity Fund</li>
+        <li>Equity Research Intern @ Asset Management Firm</li>
+      </ul>
+    </div>
+  </section>
+
+  <section id="work">
+    <h2>My Work</h2>
+    <div class="projects">
+      <div class="card">
+        <h3>Sentiment Analysis (NLP)</h3>
+        <p>Built a feedback engine using Python and BigQuery for product improvement at a digital health startup.</p>
+      </div>
+      <div class="card">
+        <h3>Displacement Risk Model</h3>
+        <p>Developed a county-level risk index using ACS + eviction data to explore housing precarity.</p>
+      </div>
+      <div class="card">
+        <h3>ESG Text Classification</h3>
+        <p>Applied NLP techniques to classify corporate sustainability statements using LDA and logistic regression.</p>
+      </div>
+    </div>
+  </section>
+
+  <section id="life">
+    <h2>My Life</h2>
+    <div class="life">
+      <div class="card">
+        <h3>Exploring NYC</h3>
+        <p>I love walking through New York neighborhoods, discovering coffee shops and bookstores.</p>
+      </div>
+      <div class="card">
+        <h3>Food Enthusiast</h3>
+        <p>My favorites: Italian pasta, French pastry, and anything spicy. Cooking relaxes me.</p>
+      </div>
+      <div class="card">
+        <h3>Travel</h3>
+        <p>From Kyoto’s temples to Yosemite’s cliffs—travel keeps me inspired and grounded.</p>
+      </div>
+    </div>
+  </section>
 </body>
 </html>
 
