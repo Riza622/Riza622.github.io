@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>My Life | Riza Serik</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 20px;
+      max-width: 1000px;
+    }
+    nav {
+      margin-bottom: 20px;
+    }
+    nav a {
+      margin-right: 20px;
+      text-decoration: none;
+      color: #0073e6;
+      font-weight: bold;
+    }
+    .gallery {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 15px;
+    }
+    .gallery img {
+      width: 30%;
+      border-radius: 8px;
+      object-fit: cover;
+      transition: transform 0.3s ease;
+    }
+    .gallery img:hover {
+      transform: scale(1.05);
+    }
+    @media (max-width: 600px) {
+      .gallery img {
+        width: 100%;
+      }
+    }
+  </style>
+</head>
+<body>
+  <nav>
+    <a href="about.html">About</a>
+    <a href="work.html">My Work</a>
+    <a href="life.html">My Life</a>
+  </nav>
+
+  <h2>Photography</h2>
+  <div class="gallery">
+    <img src="photo1.jpg" alt="Photography 1" />
+    <img src="photo2.jpg" alt="Photography 2" />
+    <img src="photo3jpg.jpg" alt="Photography 3" />
+    <img src="photo4.jpg" alt="Photography 4" />
+  </div>
+
+  <h2 style="margin-top:40px;">Dance</h2>
+  <div class="gallery">
+    <img src="dance1.jpg" alt="Dance 1" />
+    <img src="dance2.jpg" alt="Dance 2" />
+    <img src="dance3.jpg" alt="Dance 3" />
+  </div>
+
+  <h2 style="margin-top:40px;">Cooking</h2>
+  <div class="gallery">
+    <img src="cooking1.jpg" alt="Cooking 1" />
+    <img src="cooking2.jpg" alt="Cooking 2" />
+  </div>
+</body>
+</html>
