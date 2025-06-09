@@ -47,51 +47,42 @@
       flex-wrap: wrap;
     }
 
-    .text-block {
+    .left {
       flex: 1;
       min-width: 300px;
     }
 
-    .text-block h2 {
+    .left h2 {
       font-size: 28px;
       margin-bottom: 15px;
       border-left: 5px solid #333;
       padding-left: 10px;
     }
 
-    .text-block p {
+    .left p {
       font-size: 16px;
       line-height: 1.7;
       max-width: 500px;
     }
 
-    .image-column {
+    .right {
       flex: 1;
-      min-width: 280px;
+      min-width: 300px;
       display: flex;
-      flex-direction: column;
+      flex-direction: row;
+      flex-wrap: wrap;
       gap: 20px;
+      justify-content: flex-end;
     }
 
-    .image-row {
-      display: flex;
-      gap: 20px;
-    }
-
-    .image-row img,
-    .image-column img {
-      width: 100%;
+    .right img {
+      width: 48%;
       border-radius: 10px;
       object-fit: cover;
       transition: transform 0.3s ease;
     }
 
-    .image-row img {
-      width: 48%;
-    }
-
-    .image-column img:hover,
-    .image-row img:hover {
+    .right img:hover {
       transform: scale(1.03);
     }
 
@@ -100,11 +91,12 @@
         flex-direction: column;
       }
 
-      .image-row {
+      .right {
         flex-direction: column;
+        align-items: flex-start;
       }
 
-      .image-row img {
+      .right img {
         width: 100%;
       }
     }
@@ -117,16 +109,17 @@
     <a href="life.html">Life</a>
   </nav>
 
+  <h1>My Life</h1>
 
   <!-- Photography Section -->
   <div class="section">
-    <div class="text-block">
+    <div class="left">
       <h2>📸 Photography</h2>
       <p>
         I love photography—and being photographed. Exploring new places and capturing the beauty of life through a lens is my way of storytelling. It helps me slow down and appreciate the little moments that make life meaningful.
       </p>
     </div>
-    <div class="image-row">
+    <div class="right">
       <img src="photo1.jpg" alt="Photography 1" />
       <img src="photo2jpg.jpg" alt="Photography 2" />
     </div>
@@ -134,13 +127,13 @@
 
   <!-- Dance Section -->
   <div class="section">
-    <div class="text-block">
+    <div class="left">
       <h2>💃 Dance</h2>
       <p>
         I’ve been dancing on and off since kindergarten. Although I’m not a professional dancer, I always give my best on stage and strive to present every movement perfectly. In college, I focused on Chinese folk and ethnic dance, and I also spent some time learning jazz dance thanks to my mom. Eventually, I discovered my true passion—Latin dance. I love fast-paced rhythms that bring excitement and energy to both the dancer and the audience.
       </p>
     </div>
-    <div class="image-row">
+    <div class="right">
       <img src="dance1.jpg" alt="Dance 1" />
       <img src="dance2.jpg" alt="Dance 2" />
     </div>
@@ -148,16 +141,17 @@
 
   <!-- Cooking Section -->
   <div class="section">
-    <div class="text-block">
+    <div class="left">
       <h2>🍝 Cooking</h2>
       <p>
         I love cooking just as much as I enjoy exploring new restaurants. Italian and French cuisine are my favorites. For me, cooking is both an experiment and a form of relaxation—it’s where I unwind, create, and learn. Trying different ingredients and learning new recipes always brings me joy and a deeper appreciation for culture through food.
       </p>
     </div>
-    <div class="image-column">
+    <div class="right">
       <img src="cooking2.jpg" alt="Cooking 2" />
     </div>
   </div>
 </body>
 </html>
+
 
