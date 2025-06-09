@@ -2,9 +2,10 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
-  <title>Riza Serik</title>
+  <title>About | Riza Serik</title>
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;800&display=swap" rel="stylesheet">
+  <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
   <style>
     * { margin: 0; padding: 0; box-sizing: border-box; }
     body {
@@ -13,11 +14,11 @@
       color: #111;
     }
     nav {
-      background-color: #fff;
+      background-color: #f4f4f4;
       padding: 20px 40px;
       box-shadow: 0 1px 6px rgba(0, 0, 0, 0.05);
       display: flex;
-      justify-content: flex-end;
+      justify-content: center;
       gap: 30px;
       position: sticky;
       top: 0;
@@ -27,30 +28,29 @@
       text-decoration: none;
       font-weight: 600;
       color: #222;
-      font-size: 15px;
+      font-size: 16px;
     }
     nav a:hover {
       opacity: 0.7;
     }
-    .page-header {
-      background-color: #fff;
-      padding: 60px 0 30px;
+
+    h1 {
       text-align: center;
       font-size: 36px;
-      font-weight: 800;
-      color: #222;
-      border-bottom: 1px solid #eee;
-      letter-spacing: 1px;
+      margin: 50px 0 30px 0;
+      color: #111;
     }
+
     .container {
       display: flex;
       justify-content: space-between;
       align-items: center;
-      padding: 80px;
-      min-height: 100vh;
+      padding: 60px 80px;
+      flex-wrap: wrap;
     }
     .text {
       max-width: 50%;
+      min-width: 300px;
     }
     .text p {
       letter-spacing: 2px;
@@ -59,18 +59,15 @@
       font-size: 14px;
       margin-bottom: 10px;
     }
-    .text h1 {
-      font-size: 52px;
+    .text h2 {
+      font-size: 40px;
       font-weight: 800;
       margin-bottom: 10px;
     }
-    .text h2 {
+    .text h3 {
       font-weight: 400;
-      font-size: 22px;
+      font-size: 20px;
       color: #444;
-      margin-bottom: 30px;
-    }
-    .icons {
       margin-bottom: 30px;
     }
     .icons a {
@@ -91,6 +88,8 @@
       font-weight: 600;
       color: #111;
       transition: all 0.3s ease;
+      display: inline-block;
+      margin-top: 20px;
     }
     .btn:hover {
       background-color: #111;
@@ -140,6 +139,7 @@
       color: #444;
       font-size: 15px;
     }
+
     @media (max-width: 900px) {
       .container {
         flex-direction: column;
@@ -152,10 +152,6 @@
       .photo {
         margin-top: 40px;
       }
-      nav {
-        justify-content: center;
-        padding: 15px 20px;
-      }
     }
   </style>
 </head>
@@ -167,13 +163,13 @@
     <a href="life.html">Life</a>
   </nav>
 
-  <div class="page-header">About</div>
+  <h1>About Work Life</h1>
 
   <div class="container">
     <div class="text">
       <p>HELLO, I AM</p>
-      <h1>Riza Serik</h1>
-      <h2>Data Scientist & Economic Researcher</h2>
+      <h2>Riza Serik</h2>
+      <h3>Data Scientist & Economic Researcher</h3>
       <div class="icons">
         <a href="https://github.com/Riza622" target="_blank"><i class="fab fa-github"></i></a>
         <a href="mailto:ryzsrk@outlook.com"><i class="fas fa-envelope"></i></a>
