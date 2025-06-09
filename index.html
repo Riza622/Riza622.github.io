@@ -1,3 +1,4 @@
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -5,47 +6,95 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Riza Serik | Portfolio</title>
   <style>
+    * {
+      box-sizing: border-box;
+    }
     body {
-      font-family: Arial, sans-serif;
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
       margin: 0;
       padding: 0;
       scroll-behavior: smooth;
+      background-color: #fafafa;
+      color: #333;
+    }
+    nav {
+      background-color: #ffffff;
+      padding: 12px 0;
+      position: sticky;
+      top: 0;
+      z-index: 1000;
+      text-align: center;
+      border-bottom: 1px solid #eee;
+    }
+    nav a {
+      margin: 0 20px;
+      text-decoration: none;
+      color: #333;
+      font-weight: bold;
+      transition: color 0.3s ease;
+    }
+    nav a:hover {
+      color: #0073e6;
     }
     header, section {
       padding: 60px 20px;
       text-align: center;
-    }
-    nav {
-      background-color: #f4f4f4;
-      padding: 10px 0;
-      position: sticky;
-      top: 0;
-      z-index: 999;
-    }
-    nav a {
-      margin: 0 15px;
-      text-decoration: none;
-      color: #333;
-      font-weight: bold;
     }
     .container {
       max-width: 800px;
       margin: auto;
     }
     img.profile {
-      max-width: 150px;
+      max-width: 160px;
       border-radius: 50%;
       margin-bottom: 20px;
+      border: 3px solid #0073e6;
     }
     h1, h2 {
-      margin-bottom: 10px;
+      margin-bottom: 16px;
     }
     ul {
       list-style: none;
       padding: 0;
+      text-align: left;
     }
     li {
-      margin-bottom: 10px;
+      margin-bottom: 12px;
+    }
+    .gallery {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 12px;
+      margin-top: 20px;
+    }
+    .gallery img {
+      width: 200px;
+      height: auto;
+      border-radius: 10px;
+      transition: transform 0.3s ease;
+      cursor: pointer;
+    }
+    .gallery img:hover {
+      transform: scale(1.05);
+    }
+    footer {
+      text-align: center;
+      padding: 30px 20px;
+      background-color: #f0f0f0;
+      margin-top: 40px;
+      font-size: 14px;
+      color: #666;
+    }
+    @media (max-width: 600px) {
+      nav a {
+        display: inline-block;
+        margin: 10px;
+      }
+      .gallery img {
+        width: 100%;
+        max-width: 300px;
+      }
     }
   </style>
 </head>
@@ -58,7 +107,7 @@
 
   <section id="about">
     <div class="container">
-      <img src="your-photo.jpg" alt="Riza Serik" class="profile" />
+      <img src="profile.jpg" alt="Riza Serik" class="profile" />
       <h1>Hi, I'm Riza Serik</h1>
       <p>I’m a data scientist with a background in economics and a passion for translating messy data into clear insights. I’ve worked on everything from machine learning models to policy analysis, and I’m always excited to tackle a new problem.</p>
       <h2>Education</h2>
@@ -91,11 +140,32 @@
     <div class="container">
       <h2>My Life</h2>
       <p>I love Italian food and French cuisine, exploring new cities, and capturing moments with photography. Outside of data, you’ll often find me reading or hunting down great coffee.</p>
+      <div class="gallery">
+        <img src="photo1.jpg" alt="Photography 1">
+        <img src="photo2.jpg" alt="Photography 2">
+        <img src="photo3jpg.jpg" alt="Photography 3">
+        <img src="photo4.jpg" alt="Photography 4">
+        <img src="cooking1.jpg" alt="Cooking 1">
+        <img src="cooking2.jpg" alt="Cooking 2">
+        <img src="dance1.jpg" alt="Dance 1">
+        <img src="dance2.jpg" alt="Dance 2">
+        <img src="dance3.jpg" alt="Dance 3">
+      </div>
     </div>
   </section>
+
+  <footer>
+    © 2025 Riza Serik · Contact: riza622@berkeley.edu · <a href="https://www.linkedin.com/in/rizaserik" target="_blank">LinkedIn</a>
+  </footer>
 </body>
 </html>
 
+
+
+
+
+
+
+
+
 add index.html for personal site
-
-
