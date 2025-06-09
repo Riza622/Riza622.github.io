@@ -2,231 +2,155 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
-  <title>About | Riza Serik</title>
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;800&display=swap" rel="stylesheet">
-  <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
+  <title>Life | Riza Serik</title>
   <style>
-    * { margin: 0; padding: 0; box-sizing: border-box; }
     body {
-      font-family: 'Inter', sans-serif;
-      background-color: #f8f9fa;
-      color: #111;
+      font-family: Arial, sans-serif;
+      margin: 0;
+      padding: 40px;
+      background-color: #fdfdfd;
+      color: #333;
+      max-width: 1200px;
+      margin: auto;
     }
+
     nav {
+      margin-bottom: 40px;
+      text-align: center;
       background-color: #f4f4f4;
-      padding: 20px 40px;
-      box-shadow: 0 1px 6px rgba(0, 0, 0, 0.05);
-      display: flex;
-      justify-content: center;
-      gap: 30px;
+      padding: 15px 0;
       position: sticky;
       top: 0;
-      z-index: 1000;
+      z-index: 999;
     }
+
     nav a {
+      margin: 0 25px;
       text-decoration: none;
-      font-weight: 600;
       color: #222;
-      font-size: 16px;
-    }
-    nav a:hover {
-      opacity: 0.7;
+      font-weight: bold;
+      font-size: 18px;
     }
 
     h1 {
       text-align: center;
       font-size: 36px;
-      margin: 50px 0 30px 0;
-      color: #111;
+      margin-bottom: 50px;
     }
 
-    .container {
+    .section {
       display: flex;
       justify-content: space-between;
-      align-items: center;
-      padding: 60px 80px;
+      align-items: flex-start;
+      margin-bottom: 80px;
+      gap: 40px;
       flex-wrap: wrap;
     }
-    .text {
-      max-width: 50%;
+
+    .left {
+      flex: 1;
       min-width: 300px;
     }
-    .text p {
-      letter-spacing: 2px;
-      color: #b02a1f;
-      font-weight: 600;
-      font-size: 14px;
-      margin-bottom: 10px;
-    }
-    .text h2 {
-      font-size: 40px;
-      font-weight: 800;
-      margin-bottom: 10px;
-    }
-    .text h3 {
-      font-weight: 400;
-      font-size: 20px;
-      color: #444;
-      margin-bottom: 30px;
-    }
-    .icons a {
-      margin-right: 16px;
-      font-size: 22px;
-      color: #222;
-      transition: opacity 0.2s;
-    }
-    .icons a:hover {
-      opacity: 0.7;
-    }
-    .btn {
-      padding: 12px 24px;
-      border: 2px solid #111;
-      font-size: 14px;
-      text-transform: uppercase;
-      text-decoration: none;
-      font-weight: 600;
-      color: #111;
-      transition: all 0.3s ease;
-      display: inline-block;
-      margin-top: 20px;
-    }
-    .btn:hover {
-      background-color: #111;
-      color: white;
-    }
-    .photo img {
-      max-width: 360px;
-      border-radius: 12px;
-      box-shadow: 0 12px 24px rgba(0, 0, 0, 0.15);
-    }
-    .summary {
-      background-color: #fff;
-      padding: 60px 80px;
-      border-top: 1px solid #eee;
-    }
-    .intro-card {
-      background-color: #f1f3f5;
-      padding: 30px;
-      border-radius: 12px;
-      margin-bottom: 50px;
-      font-size: 16px;
-      line-height: 1.7;
-      color: #333;
-    }
-    .summary h3 {
-      font-size: 22px;
+
+    .left h2 {
+      font-size: 28px;
       margin-bottom: 15px;
-      font-weight: 600;
-      color: #111;
-    }
-    .summary ul {
-      list-style: none;
-      padding-left: 0;
-      font-size: 16px;
-      line-height: 1.7;
-      color: #444;
-    }
-    .summary ul li {
-      margin-bottom: 18px;
-    }
-    .company {
-      font-weight: 700;
-      color: #111;
-    }
-    .role {
-      font-weight: 400;
-      color: #444;
-      font-size: 15px;
+      border-left: 5px solid #333;
+      padding-left: 10px;
     }
 
-    @media (max-width: 900px) {
-      .container {
+    .left p {
+      font-size: 16px;
+      line-height: 1.7;
+      max-width: 500px;
+    }
+
+    .right {
+      flex: 1;
+      min-width: 300px;
+      display: flex;
+      flex-direction: row;
+      flex-wrap: wrap;
+      gap: 20px;
+      justify-content: flex-end;
+    }
+
+    .right img {
+      width: 48%;
+      border-radius: 10px;
+      object-fit: cover;
+      transition: transform 0.3s ease;
+    }
+
+    .right img:hover {
+      transform: scale(1.03);
+    }
+
+    @media (max-width: 768px) {
+      .section {
         flex-direction: column;
-        padding: 40px 20px;
-        text-align: center;
       }
-      .text, .photo {
-        max-width: 100%;
+
+      .right {
+        flex-direction: column;
+        align-items: flex-start;
       }
-      .photo {
-        margin-top: 40px;
+
+      .right img {
+        width: 100%;
       }
     }
   </style>
 </head>
 <body>
-
   <nav>
     <a href="about.html">About</a>
     <a href="work.html">Work</a>
     <a href="life.html">Life</a>
   </nav>
 
-  <h1>About Work Life</h1>
+  <h1>My Life</h1>
 
-  <div class="container">
-    <div class="text">
-      <p>HELLO, I AM</p>
-      <h2>Riza Serik</h2>
-      <h3>Data Scientist & Economic Researcher</h3>
-      <div class="icons">
-        <a href="https://github.com/Riza622" target="_blank"><i class="fab fa-github"></i></a>
-        <a href="mailto:ryzsrk@outlook.com"><i class="fas fa-envelope"></i></a>
-      </div>
-      <a href="mailto:ryzsrk@outlook.com" class="btn">Contact Me</a>
+  <!-- Photography Section -->
+  <div class="section">
+    <div class="left">
+      <h2>📸 Photography</h2>
+      <p>
+        I love photography—and being photographed. Exploring new places and capturing the beauty of life through a lens is my way of storytelling. It helps me slow down and appreciate the little moments that make life meaningful.
+      </p>
     </div>
-    <div class="photo">
-      <img src="profile.jpg" alt="Riza Serik">
+    <div class="right">
+      <img src="photo1.jpg" alt="Photography 1" />
+      <img src="photo2jpg.jpg" alt="Photography 2" />
     </div>
   </div>
 
-  <div class="summary">
-    <div class="intro-card">
-      I am a data scientist with a strong economics background, passionate about using data to drive insights and decisions. My experience spans finance, AI-driven analytics, and public policy research. With rigorous training from Tsinghua and Berkeley, I bridge the gap between complex models and real-world impact.
+  <!-- Dance Section -->
+  <div class="section">
+    <div class="left">
+      <h2>💃 Dance</h2>
+      <p>
+        I’ve been dancing on and off since kindergarten. Although I’m not a professional dancer, I always give my best on stage and strive to present every movement perfectly. In college, I focused on Chinese folk and ethnic dance, and I also spent some time learning jazz dance thanks to my mom. Eventually, I discovered my true passion—Latin dance. I love fast-paced rhythms that bring excitement and energy to both the dancer and the audience.
+      </p>
     </div>
-
-    <h3>Education</h3>
-    <ul>
-      <li>
-        <div class="company">University of California, Berkeley</div>
-        <div class="role">M.S. in Data Science</div>
-      </li>
-      <li>
-        <div class="company">Tsinghua University</div>
-        <div class="role">B.A. in Economics</div>
-      </li>
-      <li>
-        <div class="company">The College of William and Mary</div>
-        <div class="role">Full Scholarship Exchange Student</div>
-      </li>
-    </ul>
-
-    <h3 style="margin-top:40px;">Experience</h3>
-    <ul>
-      <li>
-        <div class="company">Sharpen DTX</div>
-        <div class="role">Data Analyst Intern</div>
-      </li>
-      <li>
-        <div class="company">Innouveaute</div>
-        <div class="role">Quantitative Research Intern</div>
-      </li>
-      <li>
-        <div class="company">Wanjia Asset Management</div>
-        <div class="role">Equity Research Intern</div>
-      </li>
-      <li>
-        <div class="company">ZhongTai Securities</div>
-        <div class="role">Investment Banking Intern</div>
-      </li>
-      <li>
-        <div class="company">RuiYi Investment</div>
-        <div class="role">Private Equity Analyst Intern</div>
-      </li>
-    </ul>
+    <div class="right">
+      <img src="dance1.jpg" alt="Dance 1" />
+      <img src="dance2.jpg" alt="Dance 2" />
+    </div>
   </div>
 
+  <!-- Cooking Section -->
+  <div class="section">
+    <div class="left">
+      <h2>🍝 Cooking</h2>
+      <p>
+        I love cooking just as much as I enjoy exploring new restaurants. Italian and French cuisine are my favorites. For me, cooking is both an experiment and a form of relaxation—it’s where I unwind, create, and learn. Trying different ingredients and learning new recipes always brings me joy and a deeper appreciation for culture through food.
+      </p>
+    </div>
+    <div class="right">
+      <img src="cooking2.jpg" alt="Cooking 2" />
+    </div>
+  </div>
 </body>
 </html>
 
