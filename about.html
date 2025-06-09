@@ -7,7 +7,7 @@
     body {
       font-family: 'Helvetica Neue', sans-serif;
       background-color: #f7f9fb;
-      color: #333;
+      color: #222;
       margin: 0;
       padding: 0;
     }
@@ -15,7 +15,7 @@
       background-color: #ffffff;
       padding: 16px;
       text-align: center;
-      box-shadow: 0 1px 5px rgba(0,0,0,0.1);
+      box-shadow: 0 1px 5px rgba(0,0,0,0.05);
       position: sticky;
       top: 0;
       z-index: 999;
@@ -23,58 +23,84 @@
     nav a {
       margin: 0 20px;
       text-decoration: none;
-      color: #0073e6;
+      color: #222;
       font-weight: 600;
       font-size: 16px;
     }
+    nav a:hover {
+      opacity: 0.7;
+    }
     .container {
-      max-width: 800px;
+      max-width: 900px;
       margin: 60px auto;
-      padding: 20px;
+      padding: 30px;
       background-color: #fff;
       border-radius: 16px;
       box-shadow: 0 8px 24px rgba(0,0,0,0.08);
+    }
+    .header {
       text-align: center;
     }
     img.profile {
-      width: 180px;
-      height: 180px;
-      border-radius: 50%;
+      width: 220px;
+      height: auto;
+      border-radius: 12px;
       object-fit: cover;
-      box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+      box-shadow: 0 6px 18px rgba(0, 0, 0, 0.2);
       margin-bottom: 25px;
-      border: 4px solid #fff;
     }
     h1 {
       font-size: 32px;
-      margin-bottom: 10px;
+      margin-bottom: 8px;
       color: #111;
     }
-    p {
-      font-size: 18px;
-      line-height: 1.7;
+    .contact {
+      font-size: 15px;
+      color: #444;
       margin-bottom: 30px;
     }
-    h2 {
-      text-align: left;
+    .contact a {
+      color: inherit;
+      text-decoration: underline;
+    }
+    .section {
       margin-top: 40px;
-      color: #0073e6;
+    }
+    h2 {
+      font-size: 22px;
+      color: #111;
+      border-bottom: 1px solid #ddd;
+      padding-bottom: 6px;
+      margin-bottom: 20px;
+    }
+    .edu-entry, .exp-entry {
+      margin-bottom: 25px;
+    }
+    .title {
+      font-weight: bold;
+      font-size: 17px;
+    }
+    .location {
+      color: #666;
+      font-size: 15px;
+      margin-bottom: 5px;
+    }
+    .date {
+      font-style: italic;
+      color: #999;
+      font-size: 14px;
     }
     ul {
-      text-align: left;
-      list-style: disc;
       padding-left: 20px;
-      font-size: 16px;
-      line-height: 1.6;
+      margin-top: 5px;
+    }
+    li {
+      margin-bottom: 6px;
+      line-height: 1.5;
     }
     @media (max-width: 600px) {
-      .container {
-        margin: 30px 16px;
-        padding: 20px 10px;
-      }
       img.profile {
-        width: 140px;
-        height: 140px;
+        width: 100%;
       }
     }
   </style>
@@ -87,22 +113,105 @@
   </nav>
 
   <div class="container">
-    <img src="profile.jpg" alt="Riza Serik" class="profile" />
-    <h1>Hi, I'm Riza Serik</h1>
-    <p>I’m a data scientist with a background in economics and a passion for translating messy data into clear insights. I’ve worked on everything from machine learning models to policy analysis, and I’m always excited to tackle a new problem.</p>
+    <div class="header">
+      <img src="profile.jpg" alt="Riza Serik" class="profile" />
+      <h1>Riza Serik</h1>
+      <div class="contact">
+        ryzsrk@outlook.com | (510) 773-1844 |
+        <a href="https://github.com/Riza622" target="_blank">GitHub</a> |
+        <a href="https://linkedin.com/in/riza-serik" target="_blank">LinkedIn</a> |
+        Location: New York
+      </div>
+    </div>
 
-    <h2>Education</h2>
-    <ul>
-      <li>M.S. in Data Science, UC Berkeley</li>
-      <li>B.A. in Economics, Tsinghua University</li>
-    </ul>
+    <div class="section">
+      <h2>Education</h2>
 
-    <h2>Work</h2>
-    <ul>
-      <li>Data Analyst Intern @ Sharpen DTX</li>
-      <li>Investment Analyst Intern @ Private Equity Fund</li>
-      <li>Equity Research Intern @ Asset Management Firm</li>
-    </ul>
+      <div class="edu-entry">
+        <div class="title">University of California, Berkeley – M.S. in Data Science</div>
+        <div class="location">Berkeley, CA</div>
+        <div class="date">May 2025 | GPA: 3.8 / 4.0 | Full Scholarship</div>
+        <ul>
+          <li>Coursework: Statistics, Machine Learning, NLP, Data Visualization</li>
+        </ul>
+      </div>
+
+      <div class="edu-entry">
+        <div class="title">The College of William and Mary – Foreign Exchange Student</div>
+        <div class="location">Williamsburg, VA</div>
+        <div class="date">Aug 2022 – Dec 2022 | Full Scholarship</div>
+        <ul>
+          <li>Coursework: Econometrics, Money & Banking, Microeconomics</li>
+        </ul>
+      </div>
+
+      <div class="edu-entry">
+        <div class="title">Tsinghua University – B.S. in Economics</div>
+        <div class="location">Beijing, China</div>
+        <div class="date">June 2024 | GPA: 3.6 / 4.0 | Excellent Literary and Art Scholarship</div>
+        <ul>
+          <li>Coursework: Financial Economics, Corporate Finance, Python</li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="section">
+      <h2>Work Experience</h2>
+
+      <div class="exp-entry">
+        <div class="title">Data Analyst Intern – Sharpen DTX</div>
+        <div class="location">San Diego, CA</div>
+        <div class="date">Feb 2025 – April 2025</div>
+        <ul>
+          <li>Built AWS-based feedback engine for GA4 → BigQuery → DynamoDB</li>
+          <li>Automated recommendation system using scikit-learn</li>
+          <li>Designed modular pipelines for real-time prediction</li>
+        </ul>
+      </div>
+
+      <div class="exp-entry">
+        <div class="title">Quantitative Research Intern – Innouveaute</div>
+        <div class="location">Silicon Valley, CA</div>
+        <div class="date">Nov 2024 – Feb 2025</div>
+        <ul>
+          <li>Built data pipelines for KPI aggregation across departments</li>
+          <li>Performed cost-benefit analysis on 3 AI projects → 20% savings</li>
+          <li>Built classification models that reduced triage time by 5 days</li>
+        </ul>
+      </div>
+
+      <div class="exp-entry">
+        <div class="title">Equity Research Intern – Wanjia Asset Management</div>
+        <div class="location">Shanghai, China</div>
+        <div class="date">July 2024 – Aug 2024</div>
+        <ul>
+          <li>Analyzed Netflix strategy for $10M investment proposal</li>
+          <li>Linked programming budget to 42% subscriber growth</li>
+          <li>Event study on HBO Max → WBD stock 5% surge</li>
+        </ul>
+      </div>
+
+      <div class="exp-entry">
+        <div class="title">Investment Banking Intern – ZhongTai Securities</div>
+        <div class="location">Beijing, China</div>
+        <div class="date">Aug 2023 – Oct 2023</div>
+        <ul>
+          <li>Drafted 30-page software industry report → $20B IPO market</li>
+          <li>Built DCF models & wrote tech sections of IPO prospectus</li>
+          <li>Prepared 5 roadshow decks for $500M public offering</li>
+        </ul>
+      </div>
+
+      <div class="exp-entry">
+        <div class="title">Private Equity Analyst Intern – RuiYi Investment</div>
+        <div class="location">Shanghai, China</div>
+        <div class="date">Jun 2022 – Aug 2022</div>
+        <ul>
+          <li>Researched NEV battery supply chain (CATL, BYD)</li>
+          <li>Tracked 20 projects worth $10B for investment alignment</li>
+        </ul>
+      </div>
+    </div>
   </div>
 </body>
 </html>
