@@ -2,215 +2,109 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
-  <title>About | Riza Serik</title>
+  <title>Riza Serik</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;800&display=swap" rel="stylesheet">
   <style>
-    body {
-      font-family: 'Helvetica Neue', sans-serif;
-      background-color: #f7f9fb;
-      color: #222;
+    * {
       margin: 0;
       padding: 0;
+      box-sizing: border-box;
     }
-    nav {
-      background-color: #ffffff;
-      padding: 16px;
-      text-align: center;
-      box-shadow: 0 1px 5px rgba(0,0,0,0.05);
-      position: sticky;
-      top: 0;
-      z-index: 999;
-    }
-    nav a {
-      margin: 0 20px;
-      text-decoration: none;
-      color: #222;
-      font-weight: 600;
-      font-size: 16px;
-    }
-    nav a:hover {
-      opacity: 0.7;
-    }
-    .container {
-      max-width: 900px;
-      margin: 60px auto;
-      padding: 30px;
-      background-color: #fff;
-      border-radius: 16px;
-      box-shadow: 0 8px 24px rgba(0,0,0,0.08);
-    }
-    .header {
-      text-align: center;
-    }
-    img.profile {
-      width: 220px;
-      height: auto;
-      border-radius: 12px;
-      object-fit: cover;
-      box-shadow: 0 6px 18px rgba(0, 0, 0, 0.2);
-      margin-bottom: 25px;
-    }
-    h1 {
-      font-size: 32px;
-      margin-bottom: 8px;
+    body {
+      font-family: 'Inter', sans-serif;
+      background-color: #f8f9fa;
       color: #111;
     }
-    .contact {
-      font-size: 15px;
+    .container {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 80px;
+      min-height: 100vh;
+    }
+    .text {
+      max-width: 50%;
+    }
+    .text p {
+      letter-spacing: 2px;
+      color: #b02a1f;
+      font-weight: 600;
+      font-size: 14px;
+      margin-bottom: 10px;
+    }
+    .text h1 {
+      font-size: 52px;
+      font-weight: 800;
+      margin-bottom: 10px;
+    }
+    .text h2 {
+      font-weight: 400;
+      font-size: 22px;
       color: #444;
       margin-bottom: 30px;
     }
-    .contact a {
-      color: inherit;
-      text-decoration: underline;
+    .icons {
+      margin-bottom: 30px;
     }
-    .section {
-      margin-top: 40px;
-    }
-    h2 {
+    .icons a {
+      margin-right: 16px;
+      text-decoration: none;
       font-size: 22px;
-      color: #111;
-      border-bottom: 1px solid #ddd;
-      padding-bottom: 6px;
-      margin-bottom: 20px;
+      color: #222;
+      transition: opacity 0.2s;
     }
-    .edu-entry, .exp-entry {
-      margin-bottom: 25px;
+    .icons a:hover {
+      opacity: 0.7;
     }
-    .title {
-      font-weight: bold;
-      font-size: 17px;
-    }
-    .location {
-      color: #666;
-      font-size: 15px;
-      margin-bottom: 5px;
-    }
-    .date {
-      font-style: italic;
-      color: #999;
+    .btn {
+      padding: 12px 24px;
+      border: 2px solid #111;
       font-size: 14px;
+      text-transform: uppercase;
+      text-decoration: none;
+      font-weight: 600;
+      color: #111;
+      transition: all 0.3s ease;
     }
-    ul {
-      padding-left: 20px;
-      margin-top: 5px;
+    .btn:hover {
+      background-color: #111;
+      color: white;
     }
-    li {
-      margin-bottom: 6px;
-      line-height: 1.5;
+    .photo img {
+      max-width: 360px;
+      border-radius: 12px;
+      box-shadow: 0 12px 24px rgba(0, 0, 0, 0.15);
     }
-    @media (max-width: 600px) {
-      img.profile {
-        width: 100%;
+    @media (max-width: 900px) {
+      .container {
+        flex-direction: column;
+        padding: 40px 20px;
+        text-align: center;
+      }
+      .text, .photo {
+        max-width: 100%;
+      }
+      .photo {
+        margin-top: 40px;
       }
     }
   </style>
 </head>
 <body>
-  <nav>
-    <a href="about.html">About</a>
-    <a href="work.html">Work</a>
-    <a href="life.html">Life</a>
-  </nav>
-
   <div class="container">
-    <div class="header">
-      <img src="profile.jpg" alt="Riza Serik" class="profile" />
+    <div class="text">
+      <p>HELLO, I AM</p>
       <h1>Riza Serik</h1>
-      <div class="contact">
-        ryzsrk@outlook.com | (510) 773-1844 |
-        <a href="https://github.com/Riza622" target="_blank">GitHub</a> |
-        <a href="https://linkedin.com/in/riza-serik" target="_blank">LinkedIn</a> |
-        Location: New York
+      <h2>Data Scientist & Economic Researcher</h2>
+      <div class="icons">
+        <a href="https://github.com/Riza622" target="_blank">🐙</a>
+        <a href="mailto:ryzsrk@outlook.com">✉️</a>
       </div>
+      <a href="mailto:ryzsrk@outlook.com" class="btn">Contact Me</a>
     </div>
-
-    <div class="section">
-      <h2>Education</h2>
-
-      <div class="edu-entry">
-        <div class="title">University of California, Berkeley – M.S. in Data Science</div>
-        <div class="location">Berkeley, CA</div>
-        <div class="date">May 2025 | GPA: 3.8 / 4.0 | Full Scholarship</div>
-        <ul>
-          <li>Coursework: Statistics, Machine Learning, NLP, Data Visualization</li>
-        </ul>
-      </div>
-
-      <div class="edu-entry">
-        <div class="title">The College of William and Mary – Foreign Exchange Student</div>
-        <div class="location">Williamsburg, VA</div>
-        <div class="date">Aug 2022 – Dec 2022 | Full Scholarship</div>
-        <ul>
-          <li>Coursework: Econometrics, Money & Banking, Microeconomics</li>
-        </ul>
-      </div>
-
-      <div class="edu-entry">
-        <div class="title">Tsinghua University – B.S. in Economics</div>
-        <div class="location">Beijing, China</div>
-        <div class="date">June 2024 | GPA: 3.6 / 4.0 | Excellent Literary and Art Scholarship</div>
-        <ul>
-          <li>Coursework: Financial Economics, Corporate Finance, Python</li>
-        </ul>
-      </div>
-    </div>
-
-    <div class="section">
-      <h2>Work Experience</h2>
-
-      <div class="exp-entry">
-        <div class="title">Data Analyst Intern – Sharpen DTX</div>
-        <div class="location">San Diego, CA</div>
-        <div class="date">Feb 2025 – April 2025</div>
-        <ul>
-          <li>Built AWS-based feedback engine for GA4 → BigQuery → DynamoDB</li>
-          <li>Automated recommendation system using scikit-learn</li>
-          <li>Designed modular pipelines for real-time prediction</li>
-        </ul>
-      </div>
-
-      <div class="exp-entry">
-        <div class="title">Quantitative Research Intern – Innouveaute</div>
-        <div class="location">Silicon Valley, CA</div>
-        <div class="date">Nov 2024 – Feb 2025</div>
-        <ul>
-          <li>Built data pipelines for KPI aggregation across departments</li>
-          <li>Performed cost-benefit analysis on 3 AI projects → 20% savings</li>
-          <li>Built classification models that reduced triage time by 5 days</li>
-        </ul>
-      </div>
-
-      <div class="exp-entry">
-        <div class="title">Equity Research Intern – Wanjia Asset Management</div>
-        <div class="location">Shanghai, China</div>
-        <div class="date">July 2024 – Aug 2024</div>
-        <ul>
-          <li>Analyzed Netflix strategy for $10M investment proposal</li>
-          <li>Linked programming budget to 42% subscriber growth</li>
-          <li>Event study on HBO Max → WBD stock 5% surge</li>
-        </ul>
-      </div>
-
-      <div class="exp-entry">
-        <div class="title">Investment Banking Intern – ZhongTai Securities</div>
-        <div class="location">Beijing, China</div>
-        <div class="date">Aug 2023 – Oct 2023</div>
-        <ul>
-          <li>Drafted 30-page software industry report → $20B IPO market</li>
-          <li>Built DCF models & wrote tech sections of IPO prospectus</li>
-          <li>Prepared 5 roadshow decks for $500M public offering</li>
-        </ul>
-      </div>
-
-      <div class="exp-entry">
-        <div class="title">Private Equity Analyst Intern – RuiYi Investment</div>
-        <div class="location">Shanghai, China</div>
-        <div class="date">Jun 2022 – Aug 2022</div>
-        <ul>
-          <li>Researched NEV battery supply chain (CATL, BYD)</li>
-          <li>Tracked 20 projects worth $10B for investment alignment</li>
-        </ul>
-      </div>
+    <div class="photo">
+      <img src="profile.jpg" alt="Riza Serik">
     </div>
   </div>
 </body>
