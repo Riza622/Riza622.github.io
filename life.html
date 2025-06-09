@@ -3,57 +3,56 @@
 <head>
   <meta charset="UTF-8" />
   <title>Life | Riza Serik</title>
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&display=swap" rel="stylesheet">
   <style>
-    * {
-      margin: 0;
-      padding: 0;
-      box-sizing: border-box;
-    }
     body {
-      font-family: 'Inter', sans-serif;
-      background-color: #f8f9fa;
-      color: #111;
-      padding-bottom: 60px;
+      font-family: Arial, sans-serif;
+      margin: 0;
+      padding: 40px;
+      max-width: 1200px;
+      background-color: #fdfdfd;
+      color: #333;
     }
+
     nav {
-      background-color: #fff;
-      padding: 20px 40px;
-      box-shadow: 0 1px 6px rgba(0, 0, 0, 0.05);
-      display: flex;
-      justify-content: flex-end;
-      gap: 30px;
+      margin-bottom: 40px;
+      text-align: center;
+      background-color: #f4f4f4;
+      padding: 15px 0;
       position: sticky;
       top: 0;
-      z-index: 1000;
+      z-index: 999;
     }
+
     nav a {
+      margin: 0 25px;
       text-decoration: none;
-      font-weight: 600;
       color: #222;
-      font-size: 15px;
+      font-weight: bold;
+      font-size: 18px;
     }
-    nav a:hover {
-      opacity: 0.7;
+
+    h1 {
+      text-align: center;
+      font-size: 36px;
+      margin-bottom: 50px;
     }
 
     .section {
-      max-width: 1000px;
-      margin: 60px auto;
-      padding: 30px;
-      background-color: #ffffff;
-      border-radius: 12px;
-      box-shadow: 0 8px 24px rgba(0, 0, 0, 0.06);
+      margin-bottom: 80px;
     }
 
     .section h2 {
-      font-size: 24px;
-      font-weight: 600;
-      color: #111;
-      margin-bottom: 20px;
-      border-bottom: 1px solid #eee;
-      padding-bottom: 8px;
+      font-size: 28px;
+      margin-bottom: 10px;
+      border-left: 5px solid #333;
+      padding-left: 10px;
+    }
+
+    .description {
+      font-size: 16px;
+      margin-bottom: 30px;
+      line-height: 1.6;
+      max-width: 800px;
     }
 
     .gallery {
@@ -64,10 +63,9 @@
 
     .gallery img {
       width: 30%;
-      border-radius: 8px;
+      border-radius: 10px;
       object-fit: cover;
       transition: transform 0.3s ease;
-      box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
     }
 
     .gallery img:hover {
@@ -76,31 +74,30 @@
 
     @media (max-width: 768px) {
       .gallery img {
-        width: 48%;
-      }
-    }
-
-    @media (max-width: 500px) {
-      .gallery img {
         width: 100%;
       }
-      .section {
-        margin: 30px 16px;
-        padding: 20px;
+
+      nav a {
+        display: inline-block;
+        margin: 10px;
       }
     }
   </style>
 </head>
 <body>
-
   <nav>
     <a href="about.html">About</a>
     <a href="work.html">Work</a>
     <a href="life.html">Life</a>
   </nav>
 
+  <h1>My Life</h1>
+
   <div class="section">
-    <h2>Photography</h2>
+    <h2>📸 Photography</h2>
+    <p class="description">
+      I love photography—and being photographed. Exploring new places and capturing the beauty of life through a lens is my way of storytelling. It helps me slow down and appreciate the little moments that make life meaningful.
+    </p>
     <div class="gallery">
       <img src="photo1.jpg" alt="Photography 1" />
       <img src="photo2.jpg" alt="Photography 2" />
@@ -110,7 +107,10 @@
   </div>
 
   <div class="section">
-    <h2>Dance</h2>
+    <h2>💃 Dance</h2>
+    <p class="description">
+      I’ve been dancing on and off since kindergarten. Although I’m not a professional dancer, I always give my best on stage and strive to present every movement perfectly. In college, I focused on Chinese folk and ethnic dance, and I also spent some time learning jazz dance thanks to my mom. Eventually, I discovered my true passion—Latin dance. I love fast-paced rhythms that bring excitement and energy to both the dancer and the audience.
+    </p>
     <div class="gallery">
       <img src="dance1.jpg" alt="Dance 1" />
       <img src="dance2.jpg" alt="Dance 2" />
@@ -119,13 +119,14 @@
   </div>
 
   <div class="section">
-    <h2>Cooking</h2>
+    <h2>🍝 Cooking</h2>
+    <p class="description">
+      I love cooking just as much as I enjoy exploring new restaurants. Italian and French cuisine are my favorites. For me, cooking is both an experiment and a form of relaxation—it’s where I unwind, create, and learn. Trying different ingredients and learning new recipes always brings me joy and a deeper appreciation for culture through food.
+    </p>
     <div class="gallery">
       <img src="cooking1.jpg" alt="Cooking 1" />
       <img src="cooking2.jpg" alt="Cooking 2" />
     </div>
   </div>
-
 </body>
 </html>
-
