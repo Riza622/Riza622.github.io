@@ -69,35 +69,38 @@
       flex: 1;
       min-width: 300px;
       display: flex;
+      flex-direction: row;
+      flex-wrap: wrap;
       gap: 20px;
       justify-content: flex-end;
-      flex-wrap: nowrap;
     }
 
-    .figure-box {
-      width: 48%;
-      display: flex;
-      flex-direction: column;
-      align-items: center;
+    .right figure {
+      width: calc(50% - 12px);
+      margin: 0;
     }
 
-    .figure-box img {
+    .right img {
       width: 100%;
       border-radius: 10px;
       object-fit: cover;
       transition: transform 0.3s ease;
     }
 
-    .figure-box img:hover {
+    .right img:hover {
       transform: scale(1.03);
     }
 
-    .figure-box figcaption {
-      margin-top: 8px;
+    .right figcaption {
       font-size: 14px;
-      text-align: center;
-      color: #555;
+      text-align: left;
+      margin-top: 8px;
       line-height: 1.4;
+      color: #555;
+    }
+
+    .right figcaption div {
+      margin-top: 5px;
     }
 
     @media (max-width: 768px) {
@@ -108,10 +111,9 @@
       .right {
         flex-direction: column;
         align-items: flex-start;
-        flex-wrap: wrap;
       }
 
-      .figure-box {
+      .right figure {
         width: 100%;
       }
     }
@@ -133,14 +135,14 @@
       </p>
     </div>
     <div class="right">
-      <figure class="figure-box">
+      <figure>
         <img src="photo1.jpg" alt="Photo 1" />
         <figcaption>
           <div><strong>Irving Ramsey Wiles – The Sonata</strong></div>
           <div>September 29, 2024 · San Francisco</div>
         </figcaption>
       </figure>
-      <figure class="figure-box">
+      <figure>
         <img src="photo2jpg.jpg" alt="Photo 2" />
         <figcaption>
           <div><strong>Golden hour light on campus</strong></div>
@@ -159,14 +161,14 @@
       </p>
     </div>
     <div class="right">
-      <figure class="figure-box">
+      <figure>
         <img src="dance1.jpg" alt="Dance 1" />
         <figcaption>
           <div><strong>Ballet Practice</strong></div>
           <div>January 2, 2024 · Beijing</div>
         </figcaption>
       </figure>
-      <figure class="figure-box">
+      <figure>
         <img src="dance2.jpg" alt="Dance 2" />
         <figcaption>
           <div><strong>Stage Rehearsal</strong></div>
@@ -185,7 +187,7 @@
       </p>
     </div>
     <div class="right">
-      <figure class="figure-box" style="width: 100%;">
+      <figure>
         <img src="cooking2.jpg" alt="Cooking 2" />
         <figcaption>
           <div><strong>Dinner with friends</strong></div>
@@ -196,4 +198,3 @@
   </div>
 </body>
 </html>
-
