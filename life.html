@@ -75,13 +75,8 @@
       justify-content: flex-end;
     }
 
-    .right figure {
-      width: calc(50% - 12px);
-      margin: 0;
-    }
-
     .right img {
-      width: 100%;
+      width: 48%;
       border-radius: 10px;
       object-fit: cover;
       transition: transform 0.3s ease;
@@ -91,16 +86,20 @@
       transform: scale(1.03);
     }
 
-    .right figcaption {
-      font-size: 14px;
-      text-align: left;
-      margin-top: 8px;
-      line-height: 1.4;
-      color: #555;
+    figure {
+      margin: 0;
+      width: 48%;
     }
 
-    .right figcaption div {
-      margin-top: 5px;
+    figcaption {
+      font-size: 14px;
+      text-align: center;
+      margin-top: 8px;
+      line-height: 1.4;
+    }
+
+    figcaption div:first-child {
+      font-style: italic;
     }
 
     @media (max-width: 768px) {
@@ -113,7 +112,8 @@
         align-items: flex-start;
       }
 
-      .right figure {
+      .right img,
+      figure {
         width: 100%;
       }
     }
@@ -126,75 +126,76 @@
     <a href="life.html">Life</a>
   </nav>
 
-  <!-- Photography Section -->
-  <div class="section">
-    <div class="left">
-      <h2>📸 Photography</h2>
-      <p>
-        I like photography and also enjoy being in front of the camera. I love exploring new places and using my camera to capture everyday moments, turning them into lasting memories.
-      </p>
-    </div>
-    <div class="right">
-      <figure>
-        <img src="photo1.jpg" alt="Photo 1" />
-        <figcaption>
-          <div><strong>Irving Ramsey Wiles – The Sonata</strong></div>
-          <div>September 29, 2024 · San Francisco</div>
-        </figcaption>
-      </figure>
-      <figure>
-        <img src="photo2jpg.jpg" alt="Photo 2" />
-        <figcaption>
-          <div><strong>Golden hour light on campus</strong></div>
-          <div>August 19, 2024 · Berkeley</div>
-        </figcaption>
-      </figure>
-    </div>
+<!-- Photography Section -->
+<div class="section">
+  <div class="left">
+    <h2>📸 Photography</h2>
+    <p>
+      I like photography and also enjoy being in front of the camera. I love exploring new places and using my camera to capture everyday moments, turning them into lasting memories.
+    </p>
   </div>
+  <div class="right">
+    <figure>
+      <img src="photo1.jpg" alt="Photo 1" />
+      <figcaption>
+        <div><em>Irving Ramsey Wiles – The Sonata</em></div>
+        <div>September 29, 2024 · San Francisco</div>
+      </figcaption>
+    </figure>
+    <figure>
+      <img src="photo2jpg.jpg" alt="Photo 2" />
+      <figcaption>
+        <div><em>Golden hour light on campus</em></div>
+        <div>August 19, 2024 · Berkeley</div>
+      </figcaption>
+    </figure>
+  </div>
+</div>
 
-  <!-- Dance Section -->
-  <div class="section">
-    <div class="left">
-      <h2>💃 Dance</h2>
-      <p>
-        I've danced on and off since kindergarten. While not a professional, I always give my best on stage. In college, I found my true passion in Latin dance — I love the rhythm, speed, and expressive movements.
-      </p>
-    </div>
-    <div class="right">
-      <figure>
-        <img src="dance1.jpg" alt="Dance 1" />
-        <figcaption>
-          <div><strong>Ballet Practice</strong></div>
-          <div>January 2, 2024 · Beijing</div>
-        </figcaption>
-      </figure>
-      <figure>
-        <img src="dance2.jpg" alt="Dance 2" />
-        <figcaption>
-          <div><strong>Stage Rehearsal</strong></div>
-          <div>February 25, 2024 · Beijing</div>
-        </figcaption>
-      </figure>
-    </div>
+<!-- Dance Section -->
+<div class="section">
+  <div class="left">
+    <h2>💃 Dance</h2>
+    <p>
+      I've danced on and off since kindergarten. While not a professional, I always give my best on stage. In college, I found my true passion in Latin dance — I love the rhythm, speed, and expressive movements.
+    </p>
   </div>
+  <div class="right">
+    <figure>
+      <img src="dance1.jpg" alt="Dance 1" />
+      <figcaption>
+        <div><em>Ballet Practice</em></div>
+        <div>January 2, 2024 · Beijing</div>
+      </figcaption>
+    </figure>
+    <figure>
+      <img src="dance2.jpg" alt="Dance 2" />
+      <figcaption>
+        <div><em>Stage Rehearsal</em></div>
+        <div>February 25, 2024 · Beijing</div>
+      </figcaption>
+    </figure>
+  </div>
+</div>
 
-  <!-- Cooking Section -->
-  <div class="section">
-    <div class="left">
-      <h2>🍝 Cooking</h2>
-      <p>
-        I love cooking just as much as I enjoy exploring new restaurants. Italian and French cuisine are my favorites. For me, cooking is both an experiment and a form of relaxation—it’s where I unwind, create, and learn. Trying different ingredients and learning new recipes always brings me joy and a deeper appreciation for culture through food.
-      </p>
-    </div>
-    <div class="right">
-      <figure>
-        <img src="cooking2.jpg" alt="Cooking 2" />
-        <figcaption>
-          <div><strong>Dinner with friends</strong></div>
-          <div>January 31, 2025 · Berkeley</div>
-        </figcaption>
-      </figure>
-    </div>
+<!-- Cooking Section -->
+<div class="section">
+  <div class="left">
+    <h2>🍝 Cooking</h2>
+    <p>
+      I love cooking just as much as I enjoy exploring new restaurants. Italian and French cuisine are my favorites. For me, cooking is both an experiment and a form of relaxation—it’s where I unwind, create, and learn. Trying different ingredients and learning new recipes always brings me joy and a deeper appreciation for culture through food.
+    </p>
   </div>
+  <div class="right">
+    <figure>
+      <img src="cooking2.jpg" alt="Cooking 2" />
+      <figcaption>
+        <div><em>Dinner with friends</em></div>
+        <div>January 31, 2025 · Berkeley</div>
+      </figcaption>
+    </figure>
+  </div>
+</div>
+
 </body>
 </html>
