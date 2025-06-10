@@ -139,7 +139,11 @@
       color: #444;
       font-size: 15px;
     }
-
+    .btn-group {
+      display: flex;
+      gap: 15px;
+      flex-wrap: wrap;
+    }
     @media (max-width: 900px) {
       .container {
         flex-direction: column;
@@ -151,6 +155,9 @@
       }
       .photo {
         margin-top: 40px;
+      }
+      .btn-group {
+        justify-content: center;
       }
     }
   </style>
@@ -172,7 +179,10 @@
         <a href="https://github.com/Riza622" target="_blank"><i class="fab fa-github"></i></a>
         <a href="mailto:ryzsrk@outlook.com"><i class="fas fa-envelope"></i></a>
       </div>
-      <a href="mailto:ryzsrk@outlook.com" class="btn">Contact Me</a>
+      <div class="btn-group">
+        <a href="mailto:ryzsrk@outlook.com" class="btn">Contact Me</a>
+        <a href="https://linkedin.com/in/riza-serik" class="btn" target="_blank">LinkedIn</a>
+      </div>
     </div>
     <div class="photo">
       <img src="profile.jpg" alt="Riza Serik">
