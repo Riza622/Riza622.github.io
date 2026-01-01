@@ -16,7 +16,7 @@
       color: #222;
     }
 
-    /* ---------- NAV (match About page) ---------- */
+    /* ---------- NAV ---------- */
     nav {
       background-color: #ffffff;
       padding: 18px 40px;
@@ -35,23 +35,49 @@
       font-size: 16px;
     }
 
-    /* ---------- PAGE WRAPPER ---------- */
-    .page {
-      max-width: 1100px;
-      margin: 0 auto;
-      padding: 70px 24px 90px;
+    /* ---------- HERO BACKGROUND ---------- */
+    .hero {
+      position: relative;
+      padding: 90px 0 110px;
+      overflow: hidden;
     }
 
-    /* ✅ Academic intro: aligned with cards, readable via padding */
+    .hero::before {
+      content: "";
+      position: absolute;
+      inset: 0;
+      background: url("view2.jpg") center / cover no-repeat;
+      z-index: 0;
+    }
+
+    /* soft academic overlay */
+    .hero::after {
+      content: "";
+      position: absolute;
+      inset: 0;
+      background: rgba(255, 255, 255, 0.78);
+      z-index: 1;
+    }
+
+    /* ---------- PAGE CONTENT ---------- */
+    .page {
+      position: relative;
+      z-index: 2;
+      max-width: 1100px;
+      margin: 0 auto;
+      padding: 0 24px;
+    }
+
+    /* ---------- INTRO (ABSTRACT STYLE) ---------- */
     .intro {
       width: 100%;
-      max-width: 1100px;      /* align with cards */
-      margin: 0 auto 42px;
-      padding: 0 120px;       /* "abstract" line length */
+      max-width: 1100px;
+      margin: 0 auto 48px;
+      padding: 0 120px;
       font-size: 16.5px;
       line-height: 1.85;
-      color: #444;
-      text-align: center;     /* academic intro feel */
+      color: #333;
+      text-align: center;
     }
 
     /* ---------- PROJECT CARD ---------- */
@@ -117,17 +143,18 @@
       display: flex;
       flex-direction: column;
       gap: 34px;
+      padding-bottom: 90px;
     }
 
     /* ---------- MOBILE ---------- */
     @media (max-width: 900px) {
-      .page {
-        padding: 56px 18px 80px;
+      .hero {
+        padding: 70px 0 90px;
       }
       .intro {
         padding: 0 12px;
-        text-align: left; /* better reading on mobile */
-        margin-bottom: 34px;
+        text-align: left;
+        margin-bottom: 36px;
       }
       .card {
         flex-direction: column;
@@ -145,61 +172,59 @@
     <a href="work.html">Research</a>
   </nav>
 
-  <div class="page">
+  <section class="hero">
+    <div class="page">
 
-    <!-- ✅ No duplicate "Research" title -->
-    <div class="intro">
-      My research interest started with my undergraduate thesis on the gender pay gap in the livestreaming industry. That project made me realize how powerful—and fun—it can be to play with data and explore fascinating economic questions. At Berkeley, I’ve expanded those skills by applying machine learning and statistical methods to a range of real-world problems, from housing displacement and health risks to social trust and digital sentiment. You can find more of my projects below.
+      <div class="intro">
+        My research interest started with my undergraduate thesis on the gender pay gap in the livestreaming industry. That project made me realize how powerful—and fun—it can be to play with data and explore fascinating economic questions. At Berkeley, I’ve expanded those skills by applying machine learning and statistical methods to a range of real-world problems, from housing displacement and health risks to social trust and digital sentiment. You can find more of my projects below.
+      </div>
+
+      <div class="stack">
+
+        <div class="card">
+          <div class="img-col">
+            <img src="gender_gap_by_region.png" alt="Sales Amount by Region">
+          </div>
+          <div class="text-col">
+            <div class="eyebrow">Sales Amount by Region</div>
+            <h2>Gender Pay Gap in Livestreaming Industry</h2>
+            <hr class="divider">
+            <p>
+              I explored income inequality in livestream e-commerce using a dataset of over two million sessions. After cleaning the data and building regression models, I found that women, despite being more active on the platform, earned significantly less than men. The gap narrowed with more followers, livestreaming experience, and MCN (talent agency) support. I also discovered a “same-gender audience effect”: female influencers tend to attract more female viewers, which boosts their sales.
+            </p>
+          </div>
+        </div>
+
+        <div class="card">
+          <div class="img-col">
+            <img src="conflict_myanmar_combined.png" alt="Myanmar Conflict Timeline and Maps">
+          </div>
+          <div class="text-col">
+            <div class="eyebrow">Myanmar Conflict Timeline and Maps</div>
+            <h2>Forecasting Political Violence in Myanmar</h2>
+            <hr class="divider">
+            <p>
+              I used Difference-in-Differences (DiD) to study how government interventions in religious and ethnic affairs can intensify conflict, focusing on the Rohingya crisis in Myanmar. Using Rakhine State as a case study, I compared trends in civilian casualties before and after the August 2017 clearance operation. I then trained a Random Forest model to forecast weekly harm and found that post-2017 violence reflected a regime-induced structural break.
+            </p>
+          </div>
+        </div>
+
+        <div class="card">
+          <div class="img-col">
+            <img src="ca_price_decline_map.png" alt="California Housing Price Decline Map">
+          </div>
+          <div class="text-col">
+            <div class="eyebrow">California Housing Price Decline Map</div>
+            <h2>Displacement Risk and Housing Price Volatility</h2>
+            <hr class="divider">
+            <p>
+              Using ACS Census data and home price indices, I examined how rental patterns and housing price volatility interacted across California counties during the 2007–2009 crisis. Regions with larger price declines exhibited more unequal rental distributions, suggesting heightened displacement risk following economic shocks.
+            </p>
+          </div>
+        </div>
+
+      </div>
     </div>
-
-    <div class="stack">
-
-      <!-- Card 1 -->
-      <div class="card">
-        <div class="img-col">
-          <img src="gender_gap_by_region.png" alt="Sales Amount by Region">
-        </div>
-        <div class="text-col">
-          <div class="eyebrow">Sales Amount by Region</div>
-          <h2>Gender Pay Gap in Livestreaming Industry</h2>
-          <hr class="divider">
-          <p>
-            I explored income inequality in livestream e-commerce using a dataset of over two million sessions. After cleaning the data and building regression models, I found that women, despite being more active on the platform, earned significantly less than men. The gap narrowed with more followers, livestreaming experience, and MCN (talent agency) support. I also discovered a “same-gender audience effect”: female influencers tend to attract more female viewers, which boosts their sales.
-          </p>
-        </div>
-      </div>
-
-      <!-- Card 2 -->
-      <div class="card">
-        <div class="img-col">
-          <img src="conflict_myanmar_combined.png" alt="Myanmar Conflict Timeline and Maps">
-        </div>
-        <div class="text-col">
-          <div class="eyebrow">Myanmar Conflict Timeline and Maps</div>
-          <h2>Forecasting Political Violence in Myanmar</h2>
-          <hr class="divider">
-          <p>
-            I used Difference-in-Differences (DiD) to study how government interventions in religious and ethnic affairs can intensify conflict, focusing on the Rohingya crisis in Myanmar. I used Rakhine State as a case study and compared trends in civilian casualties before and after the August 2017 clearance operation. I found that violence against civilians in Rakhine increased significantly relative to other regions after the policy was implemented, suggesting a targeted impact on the local Muslim population. I then trained a Random Forest model using conflict-related features—such as violence type, actor behavior, and recent fatalities—to forecast weekly harm. I found that while the model performed well in pre-policy periods, it failed to predict the surge in violence after 2017, suggesting that a significant shift in conflict dynamics—likely triggered by a regime policy change—rendered past patterns less predictive.
-          </p>
-        </div>
-      </div>
-
-      <!-- Card 3 -->
-      <div class="card">
-        <div class="img-col">
-          <img src="ca_price_decline_map.png" alt="California Housing Price Decline Map">
-        </div>
-        <div class="text-col">
-          <div class="eyebrow">California Housing Price Decline Map</div>
-          <h2>Displacement Risk and Housing Price Volatility</h2>
-          <hr class="divider">
-          <p>
-            I used ACS Census data and home price indices to examine how rental patterns and housing price volatility interacted across California counties during the 2007–2009 crisis. I created density plots to compare the distribution of rental rates in high-volatility and low-volatility areas, and mapped price declines using county-level choropleths. I found that regions with larger drops in housing prices tended to have more uneven rental distributions—suggesting a higher risk of displacement. Economic shocks appeared to make housing less stable for renters in already vulnerable areas.
-          </p>
-        </div>
-      </div>
-
-    </div>
-  </div>
+  </section>
 </body>
 </html>
