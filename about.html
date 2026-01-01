@@ -5,10 +5,18 @@
   <title>About | Riza Serik</title>
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
+  <!-- Google Font -->
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;800&display=swap" rel="stylesheet">
 
+  <!-- Font Awesome (latest kit supports X icon) -->
+  <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
+
   <style>
-    * { margin: 0; padding: 0; box-sizing: border-box; }
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
 
     body {
       font-family: 'Inter', sans-serif;
@@ -16,16 +24,17 @@
       color: #111;
     }
 
+    /* ---------- NAV ---------- */
     nav {
-      background-color: #f4f4f4;
-      padding: 20px 40px;
-      box-shadow: 0 1px 6px rgba(0, 0, 0, 0.05);
+      background-color: #ffffff;
+      padding: 18px 40px;
       display: flex;
       justify-content: center;
-      gap: 30px;
+      gap: 40px;
       position: sticky;
       top: 0;
       z-index: 1000;
+      box-shadow: 0 1px 6px rgba(0,0,0,0.05);
     }
 
     nav a {
@@ -35,10 +44,13 @@
       font-size: 16px;
     }
 
-    nav a:hover { opacity: 0.7; }
+    nav a:hover {
+      opacity: 0.7;
+    }
 
-    /* ===== HERO SECTION ===== */
+    /* ---------- HERO ---------- */
     .container {
+      min-height: calc(100vh - 70px);
       display: flex;
       justify-content: space-between;
       align-items: center;
@@ -53,17 +65,17 @@
       position: relative;
     }
 
+    /* dark overlay for readability */
     .container::before {
       content: "";
       position: absolute;
       inset: 0;
-      background: rgba(0, 0, 0, 0.45);
-      z-index: 0;
+      background: rgba(0,0,0,0.35);
     }
 
-    .container > * {
+    .text, .photo {
       position: relative;
-      z-index: 1;
+      z-index: 2;
     }
 
     .text {
@@ -74,60 +86,54 @@
 
     .text p {
       letter-spacing: 2px;
-      color: #ffd6cc;
       font-weight: 600;
       font-size: 14px;
-      margin-bottom: 10px;
+      margin-bottom: 12px;
+      color: #f2d6d3;
     }
 
     .text h2 {
-      font-size: 40px;
+      font-size: 44px;
       font-weight: 800;
-      margin-bottom: 16px;
+      margin-bottom: 28px;
     }
 
-    /* ===== ICONS ===== */
+    /* ---------- ICONS ---------- */
     .icons {
       display: flex;
       gap: 14px;
-      margin-bottom: 24px;
+      margin-bottom: 28px;
     }
 
-    .icon-box {
-      width: 42px;
-      height: 42px;
+    .icons a {
+      width: 44px;
+      height: 44px;
       border: 2px solid #fff;
       display: flex;
       align-items: center;
       justify-content: center;
       color: #fff;
       text-decoration: none;
+      font-size: 18px;
       transition: all 0.25s ease;
     }
 
-    .icon-box:hover {
+    .icons a:hover {
       background-color: #fff;
       color: #111;
     }
 
-    .icon-box svg {
-      width: 18px;
-      height: 18px;
-      fill: currentColor;
-      display: block;
-    }
-
-    /* ===== PHOTO ===== */
+    /* ---------- PHOTO ---------- */
     .photo img {
-      max-width: 300px;
-      border-radius: 12px;
-      box-shadow: 0 12px 24px rgba(0, 0, 0, 0.25);
+      max-width: 300px;   /* smaller than before */
+      border-radius: 14px;
+      box-shadow: 0 12px 28px rgba(0,0,0,0.35);
     }
 
-    /* ===== LOWER CONTENT ===== */
+    /* ---------- SUMMARY ---------- */
     .summary {
-      background-color: #fff;
-      padding: 60px 80px;
+      background-color: #ffffff;
+      padding: 80px;
       border-top: 1px solid #eee;
     }
 
@@ -149,27 +155,43 @@
 
     .summary ul {
       list-style: none;
-      padding-left: 0;
       font-size: 16px;
       line-height: 1.7;
       color: #444;
     }
 
-    .summary ul li { margin-bottom: 18px; }
+    .summary li {
+      margin-bottom: 18px;
+    }
 
-    .company { font-weight: 700; }
-    .role { font-size: 15px; color: #444; }
+    .company {
+      font-weight: 700;
+    }
 
+    .role {
+      font-size: 15px;
+      color: #555;
+    }
+
+    /* ---------- MOBILE ---------- */
     @media (max-width: 900px) {
       .container {
         flex-direction: column;
-        padding: 80px 20px;
         text-align: center;
+        padding: 80px 30px;
       }
 
-      .text, .photo { max-width: 100%; }
-      .photo { margin-top: 40px; }
-      .icons { justify-content: center; }
+      .text {
+        max-width: 100%;
+      }
+
+      .icons {
+        justify-content: center;
+      }
+
+      .photo {
+        margin-top: 40px;
+      }
     }
   </style>
 </head>
@@ -186,27 +208,15 @@
       <p>HELLO, I AM</p>
       <h2>Riza Serik</h2>
 
-      <!-- ICONS ONLY -->
       <div class="icons">
-        <!-- Email -->
-        <a class="icon-box" href="mailto:ryzsrk@outlook.com" aria-label="Email">
-          <svg viewBox="0 0 24 24">
-            <path d="M20 4H4c-1.1 0-2 .9-2 2v12c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2Zm0 4-8 5-8-5V6l8 5 8-5v2Z"/>
-          </svg>
+        <a href="mailto:ryzsrk@outlook.com" aria-label="Email">
+          <i class="fas fa-envelope"></i>
         </a>
-
-        <!-- LinkedIn -->
-        <a class="icon-box" href="https://www.linkedin.com/in/riza-serik-/" target="_blank" aria-label="LinkedIn">
-          <svg viewBox="0 0 24 24">
-            <path d="M20.45 20.45h-3.56v-5.6c0-1.34-.02-3.07-1.87-3.07-1.87 0-2.16 1.46-2.16 2.97v5.7H9.3V9h3.41v1.56h.05c.48-.9 1.65-1.86 3.39-1.86 3.62 0 4.29 2.38 4.29 5.48v6.27ZM5.34 7.43a2.07 2.07 0 1 1 0-4.14 2.07 2.07 0 0 1 0 4.14ZM7.12 20.45H3.56V9h3.56v11.45Z"/>
-          </svg>
+        <a href="https://www.linkedin.com/in/riza-serik-/" target="_blank" aria-label="LinkedIn">
+          <i class="fab fa-linkedin-in"></i>
         </a>
-
-        <!-- X -->
-        <a class="icon-box" href="https://x.com/RSaireke6471" target="_blank" aria-label="X">
-          <svg viewBox="0 0 24 24">
-            <path d="M18.901 1.153h3.68l-8.04 9.19 9.46 12.504h-7.4l-5.8-7.58-6.64 7.58H.48l8.6-9.83L0 1.154h7.6l5.24 6.92 6.06-6.92Zm-1.29 19.49h2.04L6.49 3.27H4.3L17.61 20.64Z"/>
-          </svg>
+        <a href="https://x.com/RSaireke6471" target="_blank" aria-label="X">
+          <i class="fab fa-x-twitter"></i>
         </a>
       </div>
     </div>
@@ -219,7 +229,7 @@
   <div class="summary">
     <div class="intro-card">
       Hi there! My name is Riza Serik. I'm interested in macroeconomics and how financial markets move. I enjoy using tools like Python and machine learning to dig into real data and answer interesting questions — like predicting market trends or seeing how policies actually play out.
-      You can check out more of my projects on the Work page.
+      You can check out more of my projects on the Research page.
     </div>
 
     <h3>Education</h3>
@@ -234,7 +244,7 @@
       </li>
       <li>
         <div class="company">The College of William and Mary</div>
-        <div class="role">Full Scholarship Exchange Student</div>
+        <div class="role">Exchange Student (Full Scholarship)</div>
       </li>
     </ul>
   </div>
