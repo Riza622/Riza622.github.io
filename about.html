@@ -88,15 +88,31 @@
     }
 
     /* ===== ICON ROW ===== */
+    .icons {
+      display: flex;
+      align-items: center;
+      gap: 16px;
+      margin-top: 6px;
+    }
+
     .icons a {
-      margin-right: 16px;
       font-size: 22px;
       color: #fff;
       transition: opacity 0.2s;
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      text-decoration: none;
     }
 
-    .icons a:hover {
-      opacity: 0.7;
+    .icons a:hover { opacity: 0.7; }
+
+    /* Make inline SVG match icon size */
+    .icons svg {
+      width: 22px;
+      height: 22px;
+      display: block;
+      fill: currentColor;
     }
 
     .btn-group {
@@ -161,9 +177,7 @@
       color: #444;
     }
 
-    .summary ul li {
-      margin-bottom: 18px;
-    }
+    .summary ul li { margin-bottom: 18px; }
 
     .company {
       font-weight: 700;
@@ -183,17 +197,13 @@
         text-align: center;
       }
 
-      .text, .photo {
-        max-width: 100%;
-      }
+      .text, .photo { max-width: 100%; }
 
-      .photo {
-        margin-top: 40px;
-      }
+      .photo { margin-top: 40px; }
 
-      .btn-group {
-        justify-content: center;
-      }
+      .btn-group { justify-content: center; }
+
+      .icons { justify-content: center; }
     }
   </style>
 </head>
@@ -214,12 +224,18 @@
         <a href="https://github.com/Riza622" target="_blank" aria-label="GitHub">
           <i class="fab fa-github"></i>
         </a>
+
         <a href="https://www.linkedin.com/in/riza-serik-/" target="_blank" aria-label="LinkedIn">
           <i class="fab fa-linkedin"></i>
         </a>
+
+        <!-- X (Twitter) icon via inline SVG (always works) -->
         <a href="https://x.com/RSaireke6471" target="_blank" aria-label="X">
-          <i class="fab fa-x-twitter"></i>
+          <svg viewBox="0 0 24 24" aria-hidden="true">
+            <path d="M18.901 1.153h3.68l-8.04 9.19 9.46 12.504h-7.4l-5.8-7.58-6.64 7.58H.48l8.6-9.83L0 1.154h7.6l5.24 6.92 6.06-6.92Zm-1.29 19.49h2.04L6.49 3.27H4.3L17.61 20.64Z"></path>
+          </svg>
         </a>
+
         <a href="mailto:ryzsrk@outlook.com" aria-label="Email">
           <i class="fas fa-envelope"></i>
         </a>
