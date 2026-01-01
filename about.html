@@ -5,10 +5,15 @@
   <title>About | Riza Serik</title>
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
+  <!-- Google Font -->
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;800&display=swap" rel="stylesheet">
 
   <style>
-    * { margin: 0; padding: 0; box-sizing: border-box; }
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
 
     body {
       font-family: 'Inter', sans-serif;
@@ -44,10 +49,11 @@
       align-items: center;
       padding: 110px 80px;
       flex-wrap: wrap;
-      background: url("view.JPG") center/cover no-repeat;
+      background: url("view.JPG") center / cover no-repeat;
       position: relative;
     }
 
+    /* overlay */
     .container::before {
       content: "";
       position: absolute;
@@ -55,14 +61,17 @@
       background: rgba(0,0,0,0.35);
     }
 
-    .text, .photo {
+    .text,
+    .photo {
       position: relative;
       z-index: 2;
     }
 
+    /* ---------- LEFT TEXT ---------- */
     .text {
       max-width: 50%;
       color: #fff;
+      margin-top: -40px; /* 👈 上移名字 + 图标 */
     }
 
     .text p {
@@ -98,11 +107,11 @@
     .icons svg {
       width: 20px;
       height: 20px;
-      fill: white;
+      fill: #ffffff;
     }
 
     .icons a:hover {
-      background: white;
+      background-color: #ffffff;
     }
 
     .icons a:hover svg {
@@ -110,6 +119,10 @@
     }
 
     /* ---------- PHOTO ---------- */
+    .photo {
+      margin-top: -40px; /* 👈 与左侧一致上移 */
+    }
+
     .photo img {
       max-width: 280px;
       border-radius: 14px;
@@ -118,13 +131,13 @@
 
     /* ---------- SUMMARY ---------- */
     .summary {
-      background: #ffffff;
+      background-color: #ffffff;
       padding: 80px;
       border-top: 1px solid #eee;
     }
 
     .intro-card {
-      background: #f1f3f5;
+      background-color: #f1f3f5;
       padding: 30px;
       border-radius: 12px;
       margin-bottom: 50px;
@@ -136,81 +149,111 @@
     .summary h3 {
       font-size: 22px;
       margin-bottom: 15px;
+      font-weight: 600;
     }
 
     .summary ul {
       list-style: none;
       font-size: 16px;
       line-height: 1.7;
+      color: #444;
     }
 
-    .company { font-weight: 700; }
-    .role { font-size: 15px; color: #555; }
+    .summary li {
+      margin-bottom: 18px;
+    }
 
+    .company {
+      font-weight: 700;
+    }
+
+    .role {
+      font-size: 15px;
+      color: #555;
+    }
+
+    /* ---------- MOBILE ---------- */
     @media (max-width: 900px) {
       .container {
         flex-direction: column;
         text-align: center;
         padding: 80px 30px;
       }
-      .icons { justify-content: center; }
-      .photo { margin-top: 40px; }
+
+      .text {
+        max-width: 100%;
+        margin-top: 0;
+      }
+
+      .icons {
+        justify-content: center;
+      }
+
+      .photo {
+        margin-top: 30px;
+      }
     }
   </style>
 </head>
 
 <body>
 
-<nav>
-  <a href="about.html">About</a>
-  <a href="work.html">Research</a>
-</nav>
+  <nav>
+    <a href="about.html">About</a>
+    <a href="work.html">Research</a>
+  </nav>
 
-<div class="container">
-  <div class="text">
-    <p>HELLO, I AM</p>
-    <h2>Riza Serik</h2>
+  <div class="container">
+    <div class="text">
+      <p>HELLO, I AM</p>
+      <h2>Riza Serik</h2>
 
-    <div class="icons">
-      <!-- Email -->
-      <a href="mailto:ryzsrk@outlook.com" aria-label="Email">
-        <svg viewBox="0 0 24 24"><path d="M2 4h20v16H2z M4 6l8 5 8-5"/></svg>
-      </a>
+      <div class="icons">
+        <!-- Email -->
+        <a href="mailto:ryzsrk@outlook.com" aria-label="Email">
+          <svg viewBox="0 0 24 24">
+            <path d="M2 4h20v16H2z M4 6l8 5 8-5"/>
+          </svg>
+        </a>
 
-      <!-- LinkedIn -->
-      <a href="https://www.linkedin.com/in/riza-serik-/" target="_blank" aria-label="LinkedIn">
-        <svg viewBox="0 0 24 24"><path d="M4 3a2 2 0 100 4 2 2 0 000-4zm0 6h4v12H4zm6 0h4v2c.6-1 2-2 4-2 4 0 5 3 5 7v7h-4v-6c0-2 0-4-3-4s-3 2-3 4v6h-4z"/></svg>
-      </a>
+        <!-- LinkedIn -->
+        <a href="https://www.linkedin.com/in/riza-serik-/" target="_blank" aria-label="LinkedIn">
+          <svg viewBox="0 0 24 24">
+            <path d="M4 3a2 2 0 100 4 2 2 0 000-4zm0 6h4v12H4zm6 0h4v2c.6-1 2-2 4-2 4 0 5 3 5 7v7h-4v-6c0-2 0-4-3-4s-3 2-3 4v6h-4z"/>
+          </svg>
+        </a>
 
-      <!-- X -->
-      <a href="https://x.com/RSaireke6471" target="_blank" aria-label="X">
-        <svg viewBox="0 0 24 24"><path d="M3 3h4l5 7 6-7h4l-8 9 8 9h-4l-6-7-5 7H3l8-9z"/></svg>
-      </a>
+        <!-- X -->
+        <a href="https://x.com/RSaireke6471" target="_blank" aria-label="X">
+          <svg viewBox="0 0 24 24">
+            <path d="M3 3h4l5 7 6-7h4l-8 9 8 9h-4l-6-7-5 7H3l8-9z"/>
+          </svg>
+        </a>
+      </div>
+    </div>
+
+    <div class="photo">
+      <img src="profile.jpg" alt="Riza Serik">
     </div>
   </div>
 
-  <div class="photo">
-    <img src="profile.jpg" alt="Riza Serik">
-  </div>
-</div>
+  <div class="summary">
+    <div class="intro-card">
+      Hi there! My name is Riza Serik. I'm interested in macroeconomics and how financial markets move. I enjoy using tools like Python and machine learning to dig into real data and answer interesting questions — like predicting market trends or seeing how policies actually play out.
+    </div>
 
-<div class="summary">
-  <div class="intro-card">
-    Hi there! My name is Riza Serik. I'm interested in macroeconomics and how financial markets move. I enjoy using tools like Python and machine learning to dig into real data and answer interesting questions.
+    <h3>Education</h3>
+    <ul>
+      <li>
+        <div class="company">University of California, Berkeley</div>
+        <div class="role">M.S. in Data Science</div>
+      </li>
+      <li>
+        <div class="company">Tsinghua University</div>
+        <div class="role">B.A. in Economics</div>
+      </li>
+    </ul>
   </div>
-
-  <h3>Education</h3>
-  <ul>
-    <li>
-      <div class="company">University of California, Berkeley</div>
-      <div class="role">M.S. in Data Science</div>
-    </li>
-    <li>
-      <div class="company">Tsinghua University</div>
-      <div class="role">B.A. in Economics</div>
-    </li>
-  </ul>
-</div>
 
 </body>
 </html>
