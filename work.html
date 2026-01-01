@@ -3,322 +3,216 @@
 <head>
   <meta charset="UTF-8" />
   <title>Work | Riza Serik</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;800&display=swap" rel="stylesheet">
+
   <style>
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+
     body {
-      font-family: Arial, sans-serif;
-      margin: 0;
-      padding: 40px;
-      background-color: #fdfdfd;
-      color: #333;
-      max-width: 1200px;
-      margin: auto;
+      font-family: 'Inter', sans-serif;
+      background-color: #f8f9fa;
+      color: #111;
+      line-height: 1.7;
     }
 
     nav {
-      margin-bottom: 40px;
-      text-align: center;
       background-color: #f4f4f4;
-      padding: 15px 0;
+      padding: 20px 40px;
+      box-shadow: 0 1px 6px rgba(0, 0, 0, 0.05);
+      display: flex;
+      justify-content: center;
+      gap: 30px;
       position: sticky;
       top: 0;
-      z-index: 999;
+      z-index: 1000;
     }
 
     nav a {
-      margin: 0 25px;
       text-decoration: none;
+      font-weight: 600;
       color: #222;
-      font-weight: bold;
-      font-size: 18px;
+      font-size: 16px;
+    }
+
+    nav a:hover { opacity: 0.7; }
+
+    .wrap {
+      max-width: 1100px;
+      margin: 0 auto;
+      padding: 60px 20px 90px;
     }
 
     h1 {
-      text-align: center;
       font-size: 36px;
-      margin-bottom: 50px;
+      margin-bottom: 18px;
     }
 
-    .section {
+    .lead {
+      font-size: 16px;
+      color: #333;
+      max-width: 900px;
       margin-bottom: 40px;
     }
 
-    .section h2 {
-      font-size: 28px;
-      margin-bottom: 15px;
-      border-left: 5px solid #333;
-      padding-left: 10px;
+    .card {
+      background: #fff;
+      border-radius: 16px;
+      box-shadow: 0 4px 18px rgba(0,0,0,0.06);
+      padding: 28px;
+      margin-bottom: 28px;
+      display: flex;
+      gap: 26px;
+      align-items: flex-start;
     }
 
-    .section p {
-      font-size: 16px;
-      line-height: 1.7;
-      margin-bottom: 25px;
-      max-width: 800px;
+    .img-col {
+      flex: 1;
+      min-width: 240px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
     }
 
-    .section ul {
-      font-size: 16px;
-      line-height: 1.7;
-      padding-left: 20px;
+    .img-col img {
+      width: 100%;
+      max-width: 360px;
+      height: auto;
+      border-radius: 12px;
+      border: 1px solid #e6e6e6;
+      box-shadow: 0 4px 10px rgba(0,0,0,0.05);
+      background: #fff;
     }
 
-    .section li {
+    .text-col {
+      flex: 2;
+      min-width: 280px;
+    }
+
+    .kicker {
+      font-size: 12px;
+      font-weight: 700;
+      letter-spacing: 1.6px;
+      text-transform: uppercase;
+      color: #666;
+      margin-bottom: 10px;
+    }
+
+    .title {
+      font-size: 22px;
+      font-weight: 700;
+      margin-bottom: 10px;
+    }
+
+    .rule {
+      width: 70px;
+      border: none;
+      border-top: 2px solid #333;
+      margin: 10px 0 16px;
+      opacity: 0.6;
+    }
+
+    .text-col p {
+      font-size: 15.5px;
+      color: #444;
       margin-bottom: 12px;
+    }
+
+    @media (max-width: 900px) {
+      .card {
+        flex-direction: column;
+        padding: 22px;
+      }
+      .img-col img {
+        max-width: 520px;
+      }
+      h1 { font-size: 30px; }
     }
   </style>
 </head>
+
 <body>
+
   <nav>
     <a href="about.html">About</a>
     <a href="work.html">Work</a>
-    <a href="life.html">Life</a>
   </nav>
 
-  <div class="section">
-    <h2>Work</h2>
-My research interest started with my undergraduate thesis on the gender pay gap in the livestreaming industry. That project made me realize how powerful—and fun—it can be to play with data and explore fascinating economic questions. At Berkeley, I’ve expanded those skills by applying machine learning and statistical methods to a range of real-world problems, from housing displacement and health risks to social trust and digital sentiment. You can find more of my projects below.
-  </div>
+  <div class="wrap">
+    <h1>Work</h1>
 
-
-<!-- Gender Pay Gap Section (Improved Image Handling) -->
-<div class="section" style="display: flex; align-items: stretch; gap: 30px; background-color: #fafafa; padding: 25px 30px; border-radius: 16px; box-shadow: 0 2px 12px rgba(0,0,0,0.06);">
-
-  <!-- Image column -->
-  <div style="flex: 1; display: flex; align-items: center; justify-content: center;">
-    <img src="gender_gap_by_region.png" alt="Sales Amount by Region"
-         style="max-height: 100%; max-width: 100%; height: auto; width: auto; border-radius: 12px; border: 1px solid #ddd; box-shadow: 0 4px 8px rgba(0,0,0,0.05);">
-  </div>
-
-  <!-- Text column -->
-  <div style="flex: 2;">
-    <h2 style="margin-bottom: 8px; font-size: 22px;">Gender Pay Gap in Livestreaming Industry</h2>
-    <hr style="width: 60px; border: 1.5px solid #555; margin: 12px 0;">
-    <p style="font-size: 15.5px; line-height: 1.75; color: #444;">
-      I explored income inequality in livestream e-commerce using a dataset of over two million sessions. After cleaning the data and building regression models, I found that women, despite being more active on the platform, earned significantly less than men. <strong>The gap narrowed with more followers, livestreaming experience, and MCN (talent agency) support.</strong> I also discovered a “same-gender audience effect”: female influencers tend to attract more female viewers, which boosts their sales.
+    <p class="lead">
+      My research interest started with my undergraduate thesis on the gender pay gap in the livestreaming industry.
+      That project made me realize how powerful—and fun—it can be to play with data and explore fascinating economic questions.
+      At Berkeley, I’ve expanded those skills by applying machine learning and statistical methods to a range of real-world problems,
+      from housing displacement and health risks to social trust and digital sentiment. You can find more of my projects below.
     </p>
-  </div>
-</div>
 
-
-<!-- Conflict Forecasting in Myanmar Section (Preserve full image, no cropping) -->
-<div class="section" style="display: flex; align-items: stretch; gap: 30px; background-color: #fafafa; padding: 25px 30px; border-radius: 16px; box-shadow: 0 2px 12px rgba(0,0,0,0.06);">
-
-  <!-- Image column: image scales with text height, no cropping -->
-  <div style="flex: 1; display: flex; align-items: center; justify-content: center;">
-    <img src="conflict_myanmar_combined.png" alt="Myanmar Conflict Timeline and Maps"
-         style="max-height: 100%; max-width: 100%; height: auto; width: auto; border-radius: 12px; border: 1px solid #ddd; box-shadow: 0 4px 8px rgba(0,0,0,0.05);">
-  </div>
-
-  <!-- Text column -->
-  <div style="flex: 2;">
-    <h2 style="margin-bottom: 8px; font-size: 22px;">Forecasting Political Violence in Myanmar</h2>
-    <hr style="width: 60px; border: 1.5px solid #555; margin: 12px 0;">
-    <p style="font-size: 15.5px; line-height: 1.75; color: #444;">
-    I used Difference-in-Differences (DiD) to study how government interventions in religious and ethnic affairs can intensify conflict, focusing on the Rohingya crisis in Myanmar. I used Rakhine State as a case study and compared trends in civilian casualties before and after the August 2017 clearance operation. I found that violence against civilians in Rakhine increased significantly relative to other regions after the policy was implemented, suggesting a targeted impact on the local Muslim population. I then trained a Random Forest model using conflict-related features—such as violence type, actor behavior, and recent fatalities—to forecast weekly harm. I found that while the model performed well in pre-policy periods, it failed to predict the surge in violence after 2017, suggesting that a significant shift in conflict dynamics—likely triggered by a regime policy change—rendered past patterns less predictive.
-    </p>
-  </div>
-</div>
-
-
-<!-- Housing Displacement Analysis section (adjusted image size) -->
-<div class="section" style="display: flex; align-items: flex-start; gap: 30px; background-color: #fafafa; padding: 25px 30px; border-radius: 16px; box-shadow: 0 2px 12px rgba(0,0,0,0.06);">
-  <div style="flex: 1; text-align: center;">
-    <img src="ca_price_decline_map.png" alt="California Housing Price Decline Map" style="width: 100%; max-width: 280px; border-radius: 12px; border: 1px solid #ddd; box-shadow: 0 4px 8px rgba(0,0,0,0.05);">
-  </div>
-  <div style="flex: 2;">
-    <h2 style="margin-bottom: 8px; font-size: 22px;">Displacement Risk and Housing Price Volatility</h2>
-    <hr style="width: 60px; border: 1.5px solid #555; margin: 12px 0;">
-    <p style="font-size: 15.5px; line-height: 1.75; color: #444;">
-      <p style="font-size: 15.5px; line-height: 1.75; color: #444;">
-  I used <strong>ACS Census data</strong> and <strong>home price indices</strong> to examine how rental patterns and housing price volatility interacted across California counties during the 2007–2009 crisis. I created density plots to compare the distribution of rental rates in high-volatility and low-volatility areas, and mapped price declines using county-level choropleths. I found that regions with larger drops in housing prices tended to have more uneven rental distributions—suggesting a higher risk of displacement. Economic shocks appeared to make housing less stable for renters in already vulnerable areas.
-  </div>
-</div>
-
-
-  
-
-<!-- User Sentiment and Personalization on Sharpen AI section -->
-<div class="section" style="display: flex; align-items: flex-start; gap: 30px; background-color: #fafafa; padding: 25px 30px; border-radius: 16px; box-shadow: 0 2px 12px rgba(0,0,0,0.06);">
-  
-  <!-- Images column -->
-  <div style="flex: 1; text-align: center; display: flex; flex-direction: column; gap: 20px;">
-      <img src="sharpen_ai_clustering.png" alt="Sharpen AI Clustering Analysis" style="width: 100%; max-width: 280px; border-radius: 12px; border: 1px solid #ddd; box-shadow: 0 4px 8px rgba(0,0,0,0.05);">
-  </div>
-
-  <!-- Text column -->
-  <div style="flex: 2;">
-    <h2 style="margin-bottom: 8px; font-size: 22px;">User Sentiment and Personalization on Sharpen AI</h2>
-    <hr style="width: 60px; border: 1.5px solid #555; margin: 12px 0;">
-    <p style="font-size: 15.5px; line-height: 1.75; color: #444;">
-      I analyzed user engagement and sentiment on Sharpen®, a digital mental health platform, to inform personalized content delivery. Using <strong>text vectorization and K-means clustering</strong>, I segmented over 700 learning modules into thematic categories and applied <strong>age-based heterogeneity analysis</strong> to examine content preferences. Results showed significant variation in engagement across demographic groups, with users aged 24–35 exhibiting higher responsiveness to mindfulness and clinical modules. 
-    </p>
-  </div>
-</div>
-
-
-
-<!-- Supply Chain Topic Modeling Section -->
-<div class="section" style="display: flex; align-items: flex-start; gap: 30px; background-color: #fafafa; padding: 25px 30px; border-radius: 16px; box-shadow: 0 2px 12px rgba(0,0,0,0.06);">
-  <div style="flex: 1.5; text-align: center;">
-    <img src="supply_chain_lda.png" alt="LDA Topic Modeling Visualization" style="width: 100%; max-width: 440px; border-radius: 12px; border: 1px solid #ddd; box-shadow: 0 4px 8px rgba(0,0,0,0.05);">
-  </div>
-  <div style="flex: 2;">
-    <h2 style="margin-bottom: 8px; font-size: 22px;">Analyzing Supply Chain Disclosures</h2>
-    <hr style="width: 60px; border: 1.5px solid #555; margin: 12px 0;">
-    <p style="font-size: 15.5px; line-height: 1.75; color: #444;">
-      In this project, I used <strong>Latent Dirichlet Allocation (LDA)</strong> to extract supply chain–related themes from 10-K filings. After downloading filings through the <strong>SEC API</strong> and cleaning the raw text, I applied unsupervised topic modeling to identify patterns in how companies report their supply chain risks. I visualized the output using <strong>pyLDAvis</strong>, revealing which terms dominate each topic and how topics cluster. This approach enabled a document-level score of disclosure relevance and highlighted the limitations of generic topic models in surfacing targeted disclosures. 
-      <br><br>
-    </p>
-  </div>
-</div>
-
-  
-<!-- Section Title: Machine Learning Prediction Projects -->
-<div class="section">
-  <h2>Machine Learning Prediction Projects</h2>
-  Below are some of the machine learning projects I’ve built, covering prediction tasks in structured data, image recognition, and natural language processing. These projects helped me deepen my understanding of model evaluation, feature engineering, and explainability.
-</div>
-
-
-
-<!-- Clustering with Labeled and Unlabeled Data Section -->
-<div class="section" style="display: flex; align-items: flex-start; gap: 30px; background-color: #fafafa; padding: 25px 30px; border-radius: 16px; box-shadow: 0 2px 12px rgba(0,0,0,0.06);">
-
-  <div style="flex: 1; text-align: center;">
-    <div style="display: flex; justify-content: center; gap: 12px;">
-      <img src="pairplot_labeled.png" alt="Labeled Pairplot of Iris Data" style="width: 100%; max-width: 135px; border-radius: 12px; border: 1px solid #ddd; box-shadow: 0 4px 8px rgba(0,0,0,0.05);">
-      <img src="pairplot_unlabeled.png" alt="Unlabeled Pairplot of Iris Data" style="width: 100%; max-width: 135px; border-radius: 12px; border: 1px solid #ddd; box-shadow: 0 4px 8px rgba(0,0,0,0.05);">
+    <!-- 1) Gender Pay Gap -->
+    <div class="card">
+      <div class="img-col">
+        <img src="gender_gap_by_region.png" alt="Sales Amount by Region">
+      </div>
+      <div class="text-col">
+        <div class="kicker">Sales Amount by Region</div>
+        <div class="title">Gender Pay Gap in Livestreaming Industry</div>
+        <hr class="rule">
+        <p>
+          I explored income inequality in livestream e-commerce using a dataset of over two million sessions.
+          After cleaning the data and building regression models, I found that women, despite being more active on the platform,
+          earned significantly less than men.
+        </p>
+        <p>
+          The gap narrowed with more followers, livestreaming experience, and MCN (talent agency) support.
+          I also discovered a “same-gender audience effect”: female influencers tend to attract more female viewers,
+          which boosts their sales.
+        </p>
+      </div>
     </div>
+
+    <!-- 2) Myanmar -->
+    <div class="card">
+      <div class="img-col">
+        <img src="conflict_myanmar_combined.png" alt="Myanmar Conflict Timeline and Maps">
+      </div>
+      <div class="text-col">
+        <div class="kicker">Myanmar Conflict Timeline and Maps</div>
+        <div class="title">Forecasting Political Violence in Myanmar</div>
+        <hr class="rule">
+        <p>
+          I used Difference-in-Differences (DiD) to study how government interventions in religious and ethnic affairs can intensify conflict,
+          focusing on the Rohingya crisis in Myanmar. I used Rakhine State as a case study and compared trends in civilian casualties before and
+          after the August 2017 clearance operation. I found that violence against civilians in Rakhine increased significantly relative to other regions
+          after the policy was implemented, suggesting a targeted impact on the local Muslim population.
+        </p>
+        <p>
+          I then trained a Random Forest model using conflict-related features—such as violence type, actor behavior, and recent fatalities—to forecast weekly harm.
+          I found that while the model performed well in pre-policy periods, it failed to predict the surge in violence after 2017, suggesting that a significant shift
+          in conflict dynamics—likely triggered by a regime policy change—rendered past patterns less predictive.
+        </p>
+      </div>
+    </div>
+
+    <!-- 3) Housing -->
+    <div class="card">
+      <div class="img-col">
+        <img src="ca_price_decline_map.png" alt="California Housing Price Decline Map">
+      </div>
+      <div class="text-col">
+        <div class="kicker">California Housing Price Decline Map</div>
+        <div class="title">Displacement Risk and Housing Price Volatility</div>
+        <hr class="rule">
+        <p>
+          I used ACS Census data and home price indices to examine how rental patterns and housing price volatility interacted across California counties during the 2007–2009 crisis.
+          I created density plots to compare the distribution of rental rates in high-volatility and low-volatility areas, and mapped price declines using county-level choropleths.
+          I found that regions with larger drops in housing prices tended to have more uneven rental distributions—suggesting a higher risk of displacement.
+          Economic shocks appeared to make housing less stable for renters in already vulnerable areas.
+        </p>
+      </div>
+    </div>
+
   </div>
 
-  <div style="flex: 2;">
-    <h2 style="margin-bottom: 8px; font-size: 22px;">Penguin Machine Learning </h2>
-    <hr style="width: 60px; border: 1.5px solid #555; margin: 12px 0;">
-    <p style="font-size: 15.5px; line-height: 1.75; color: #444;">
-       I worked on a fun little project where I used machine learning to explore patterns in penguin morphology. First, I trained a <strong>HistGradientBoostingClassifier</strong> to predict species based on physical traits like bill length and flipper size. Then, I used a <strong>Neural Network Regressor</strong> to estimate body mass. One thing I found interesting was how different combinations of bill and flipper length form distinct zones of predicted weight. 
-    </p>
-  </div>
-</div>
-
-
-<!-- Music Preference Prediction section -->
-<div class="section" style="display: flex; align-items: flex-start; gap: 30px; background-color: #fafafa; padding: 25px 30px; border-radius: 16px; box-shadow: 0 2px 12px rgba(0,0,0,0.06);">
-  <div style="flex: 1.5; display: flex; flex-direction: row; gap: 20px;">
-       <img src="music_embedding.png" alt="Music Embedding Scatter" style="width: 100%; max-width: 240px; border-radius: 12px; border: 1px solid #ddd; box-shadow: 0 4px 8px rgba(0,0,0,0.05);">
-  </div>
-  <div style="flex: 2;">
-    <h2 style="margin-bottom: 8px; font-size: 22px;">Can We Predict Music Tastes with Data?</h2>
-    <hr style="width: 60px; border: 1.5px solid #555; margin: 12px 0;">
-    <p style="font-size: 15.5px; line-height: 1.75; color: #444;">
-      I was curious whether it’s possible to predict music preferences using only a song’s acoustic features — things like danceability, energy, and tempo.
-      So I trained a <strong>K-Nearest Neighbors (KNN)</strong> classifier to see how well it could distinguish between high- and low-rated songs. 
-      After preprocessing and feature selection, the model reached around <strong>72% accuracy</strong> on the test set.
-      This made me think about how much of our personal taste can be quantified and predicted — even something as subjective as music.
-    </p>
-  </div>
-</div>
-
-
-
-
-  <!-- GSS section: updated to match style -->
-<div class="section" style="display: flex; align-items: flex-start; gap: 30px; background-color: #fafafa; padding: 25px 30px; border-radius: 16px; box-shadow: 0 2px 12px rgba(0,0,0,0.06);">
-  <div style="flex: 1; text-align: center;">
-    <img src="gss_confidence_by_age.png" alt="GSS Confidence by Age" style="width: 100%; max-width: 280px; border-radius: 12px; border: 1px solid #ddd; box-shadow: 0 4px 8px rgba(0,0,0,0.05);">
-  </div>
-  <div style="flex: 2;">
-<h2 style="margin-bottom: 8px; font-size: 22px;">Trust in Government Across Demographic Groups</h2>
-
-    <hr style="width: 60px; border: 1.5px solid #555; margin: 12px 0;">
-    <p style="font-size: 15.5px; line-height: 1.75; color: #444;">
-      Using data from the 2022 General Social Survey, I looked into how trust in the federal government changes with age.
-      After cleaning the data and building variables like gender, age group, and Hispanic identity, I applied 
-      <strong>propensity score weighting</strong> to make the sample better match U.S. population benchmarks. 
-      One interesting pattern: people in their late 20s and early 30s tend to be more trusting of the government, while trust drops off among older adults.
-
-    </p>
-  </div>
-</div>
-
-
-
-  
-<!-- Fashion MNIST section -->
-<div class="section" style="display: flex; align-items: flex-start; gap: 30px; background-color: #fafafa; padding: 25px 30px; border-radius: 16px; box-shadow: 0 2px 12px rgba(0,0,0,0.06);">
-  <div style="flex: 1; text-align: center;">
-    <img src="fashion_mnist_neuralnet_diagram.png" alt="Fashion MNIST Neural Network" style="width: 100%; max-width: 280px; border-radius: 12px; border: 1px solid #ddd; box-shadow: 0 4px 8px rgba(0,0,0,0.05);">
-  </div>
-  <div style="flex: 2;">
-    <h2 style="margin-bottom: 8px; font-size: 22px;"><h2 style="margin-bottom: 8px; font-size: 22px;">Classifying Clothing Images with Neural Networks</h2>
-</h2>
-    <hr style="width: 60px; border: 1.5px solid #555; margin: 12px 0;">
-    <p style="font-size: 15.5px; line-height: 1.75; color: #444;">
-      I trained a neural network to classify fashion items from the <strong>Fashion MNIST</strong> dataset using TensorFlow and Keras.
-      The model processes <strong>28×28 grayscale images</strong> of clothing, shoes, and accessories, and predicts one of 10 predefined categories.
-      The architecture consists of a <strong>flatten layer</strong> followed by two <strong>dense layers (128 units, ReLU)</strong> and a final softmax layer.
-      After training for 10 epochs, the model achieved a test accuracy of around <strong>88%</strong>,   Working on this gave me hands-on experience with image data and model tuning, and it sparked my interest in building deeper architectures for more complex visual tasks.
-
-    </p>
-  </div>
-</div>
-
-
-  <!-- Heart Attack Prediction section -->
-<div class="section" style="display: flex; align-items: flex-start; gap: 30px; background-color: #fafafa; padding: 25px 30px; border-radius: 16px; box-shadow: 0 2px 12px rgba(0,0,0,0.06);">
-  <div style="flex: 1; text-align: center;">
-    <img src="heart_attack_logistic_illustration.png" alt="Heart Attack Prediction" style="width: 100%; max-width: 280px; border-radius: 12px; border: 1px solid #ddd; box-shadow: 0 4px 8px rgba(0,0,0,0.05);">
-  </div>
-  <div style="flex: 2;">
-    <h2 style="margin-bottom: 8px; font-size: 22px;">Predicting Heart Attack Risk with Logistic Regression</h2>
-    <hr style="width: 60px; border: 1.5px solid #555; margin: 12px 0;">
-<p style="font-size: 15.5px; line-height: 1.75; color: #444;">
-
-  Using a public health dataset, I built a <strong>logistic regression</strong> model to estimate an individual's risk of heart attack based on clinical indicators such as age, blood pressure, cholesterol, and chest pain type. 
-  After data preprocessing and feature engineering, the model was trained and evaluated with metrics including <strong>accuracy (~85%)</strong>, <strong>ROC-AUC</strong>, and a detailed <strong>confusion matrix</strong>.
-  This project helped me better understand how interpretable models can be used in real-world medical settings to flag important warning signs early.
-</p>
-    </p>
-  </div>
-</div>
-  
-
-
-
-<!-- Drug Sentiment Project Section -->
-<div class="section" style="display: flex; align-items: flex-start; gap: 30px; background-color: #fafafa; padding: 25px 30px; border-radius: 16px; box-shadow: 0 2px 12px rgba(0,0,0,0.06);">
-  <div style="flex: 1; text-align: center;">
-    <img src="drug_sentiment_pipeline.png" alt="Drug Sentiment Analysis Diagram" style="width: 100%; max-width: 280px; border-radius: 12px; border: 1px solid #ddd; box-shadow: 0 4px 8px rgba(0,0,0,0.05);">
-  </div>
-  <div style="flex: 2;">
-    <h2 style="margin-bottom: 8px; font-size: 22px;">Sentiment Classification with NLP</h2>
-    <hr style="width: 60px; border: 1.5px solid #555; margin: 12px 0;">
-    <p style="font-size: 15.5px; line-height: 1.75; color: #444;">
-      I used natural language processing to analyze drug reviews from Drugs.com. After cleaning and tokenizing the text, I applied <strong>TF-IDF</strong> and trained a <strong>logistic regression</strong> model to classify sentiment. I also used <strong>SHAP</strong> to interpret what the model picked up on—like how certain keywords strongly signal a bad experience. 
-  </div>
-</div>
-
-
-  
-
-<!-- Titanic Survival Project Section -->
-<div class="section" style="display: flex; align-items: flex-start; gap: 30px; background-color: #fafafa; padding: 25px 30px; border-radius: 16px; box-shadow: 0 2px 12px rgba(0,0,0,0.06);">
-  <div style="flex: 1; text-align: center;">
-    <img src="titanic_pipeline.png" alt="Titanic Survival Prediction Diagram" style="width: 100%; max-width: 280px; border-radius: 12px; border: 1px solid #ddd; box-shadow: 0 4px 8px rgba(0,0,0,0.05);">
-  </div>
-  <div style="flex: 2;">
-    <h2 style="margin-bottom: 8px; font-size: 22px;">Predicting Titanic Survival with ML</h2>
-    <hr style="width: 60px; border: 1.5px solid #555; margin: 12px 0;">
-    <p style="font-size: 15.5px; line-height: 1.75; color: #444;">
-   I joined the Kaggle Titanic Machine Learning competition and built a full pipeline to predict passenger survival using features like age, sex, class, and fare. 
-      I trained a <strong>Gradient Boosting</strong> model and explored feature importance to understand what really mattered. 
-      The project gave me solid experience working with structured data, and I ended up placing in the <strong>top 20%</strong>.
-
-    </p>
-  </div>
-</div>
-
-
-
-  
 </body>
 </html>
