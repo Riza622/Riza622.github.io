@@ -35,18 +35,19 @@
       font-size: 16px;
     }
 
-    /* ---------- HERO BACKGROUND ---------- */
+    /* ---------- HERO BACKGROUND (view2.JPG) ---------- */
     .hero {
       position: relative;
       padding: 90px 0 110px;
       overflow: hidden;
+      min-height: calc(100vh - 70px);
     }
 
     .hero::before {
       content: "";
       position: absolute;
       inset: 0;
-      background: url("view2.jpg") center / cover no-repeat;
+      background: url("view2.JPG") center / cover no-repeat;
       z-index: 0;
     }
 
@@ -68,12 +69,12 @@
       padding: 0 24px;
     }
 
-    /* ---------- INTRO (ABSTRACT STYLE) ---------- */
+    /* ---------- INTRO (ALIGNED + PADDED) ---------- */
     .intro {
       width: 100%;
-      max-width: 1100px;
+      max-width: 1100px;   /* align with cards */
       margin: 0 auto 48px;
-      padding: 0 120px;
+      padding: 0 120px;    /* academic line length */
       font-size: 16.5px;
       line-height: 1.85;
       color: #333;
@@ -151,9 +152,12 @@
       .hero {
         padding: 70px 0 90px;
       }
+      .page {
+        padding: 0 18px;
+      }
       .intro {
         padding: 0 12px;
-        text-align: left;
+        text-align: left; /* better on mobile */
         margin-bottom: 36px;
       }
       .card {
@@ -204,7 +208,7 @@
             <h2>Forecasting Political Violence in Myanmar</h2>
             <hr class="divider">
             <p>
-              I used Difference-in-Differences (DiD) to study how government interventions in religious and ethnic affairs can intensify conflict, focusing on the Rohingya crisis in Myanmar. Using Rakhine State as a case study, I compared trends in civilian casualties before and after the August 2017 clearance operation. I then trained a Random Forest model to forecast weekly harm and found that post-2017 violence reflected a regime-induced structural break.
+              I used Difference-in-Differences (DiD) to study how government interventions in religious and ethnic affairs can intensify conflict, focusing on the Rohingya crisis in Myanmar. I used Rakhine State as a case study and compared trends in civilian casualties before and after the August 2017 clearance operation. I found that violence against civilians in Rakhine increased significantly relative to other regions after the policy was implemented, suggesting a targeted impact on the local Muslim population. I then trained a Random Forest model using conflict-related features—such as violence type, actor behavior, and recent fatalities—to forecast weekly harm. I found that while the model performed well in pre-policy periods, it failed to predict the surge in violence after 2017, suggesting that a significant shift in conflict dynamics—likely triggered by a regime policy change—rendered past patterns less predictive.
             </p>
           </div>
         </div>
@@ -218,7 +222,7 @@
             <h2>Displacement Risk and Housing Price Volatility</h2>
             <hr class="divider">
             <p>
-              Using ACS Census data and home price indices, I examined how rental patterns and housing price volatility interacted across California counties during the 2007–2009 crisis. Regions with larger price declines exhibited more unequal rental distributions, suggesting heightened displacement risk following economic shocks.
+              I used ACS Census data and home price indices to examine how rental patterns and housing price volatility interacted across California counties during the 2007–2009 crisis. I created density plots to compare the distribution of rental rates in high-volatility and low-volatility areas, and mapped price declines using county-level choropleths. I found that regions with larger drops in housing prices tended to have more uneven rental distributions—suggesting a higher risk of displacement. Economic shocks appeared to make housing less stable for renters in already vulnerable areas.
             </p>
           </div>
         </div>
