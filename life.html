@@ -3,180 +3,143 @@
 <head>
   <meta charset="UTF-8" />
   <title>Life | Riza Serik</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;800&display=swap" rel="stylesheet">
+
   <style>
-    body {
-      font-family: Arial, sans-serif;
+    * {
       margin: 0;
-      padding: 40px;
-      background-color: #fdfdfd;
-      color: #333;
-      max-width: 1200px;
-      margin: auto;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: 'Inter', sans-serif;
+      background-color: #f8f9fa;
+      color: #111;
+      line-height: 1.7;
     }
 
     nav {
-      margin-bottom: 40px;
-      text-align: center;
       background-color: #f4f4f4;
-      padding: 15px 0;
+      padding: 20px 40px;
+      box-shadow: 0 1px 6px rgba(0, 0, 0, 0.05);
+      display: flex;
+      justify-content: center;
+      gap: 30px;
       position: sticky;
       top: 0;
-      z-index: 999;
+      z-index: 1000;
     }
 
     nav a {
-      margin: 0 25px;
       text-decoration: none;
+      font-weight: 600;
       color: #222;
-      font-weight: bold;
-      font-size: 18px;
+      font-size: 16px;
+    }
+
+    nav a:hover {
+      opacity: 0.7;
     }
 
     h1 {
       text-align: center;
       font-size: 36px;
+      margin: 60px 0 20px;
+    }
+
+    .subtitle {
+      text-align: center;
+      font-size: 16px;
+      color: #555;
       margin-bottom: 50px;
     }
 
-    .section {
-      display: flex;
-      justify-content: space-between;
-      align-items: flex-start;
-      margin-bottom: 80px;
-      gap: 40px;
-      flex-wrap: wrap;
+    .container {
+      max-width: 900px;
+      margin: 0 auto;
+      padding: 0 20px 80px;
     }
 
-    .left {
-      flex: 1;
-      min-width: 300px;
+    .card {
+      background-color: #ffffff;
+      border-radius: 14px;
+      padding: 30px;
+      margin-bottom: 30px;
+      box-shadow: 0 4px 16px rgba(0,0,0,0.05);
     }
 
-    .left h2 {
-      font-size: 28px;
-      margin-bottom: 15px;
-      border-left: 5px solid #333;
-      padding-left: 10px;
+    .card h2 {
+      font-size: 22px;
+      margin-bottom: 12px;
+      font-weight: 600;
     }
 
-    .left p {
+    .card p {
       font-size: 16px;
-      line-height: 1.7;
-      max-width: 500px;
+      color: #333;
     }
 
-    .right {
-      flex: 1;
-      min-width: 300px;
-      display: flex;
-      flex-direction: row;
-      flex-wrap: wrap;
-      gap: 20px;
-      justify-content: flex-end;
-    }
-
-    .right img {
-      width: 100%;
-      border-radius: 10px;
-      object-fit: cover;
-      transition: transform 0.3s ease;
-    }
-
-    .right img:hover {
-      transform: scale(1.03);
-    }
-
-    figure {
-      margin: 0;
-      width: 48%;
-    }
-
-    figcaption {
-      font-size: 14px;
-      text-align: center;
-      margin-top: 8px;
-      line-height: 1.4;
-    }
-
-    figcaption div:first-child {
-      font-style: italic;
-    }
-
-    @media (max-width: 768px) {
-      .section {
-        flex-direction: column;
-      }
-
-      .right {
-        flex-direction: column;
-        align-items: flex-start;
-      }
-
-      .right img,
-      figure {
-        width: 100%;
+    @media (max-width: 700px) {
+      h1 {
+        font-size: 30px;
       }
     }
   </style>
 </head>
+
 <body>
+
   <nav>
     <a href="about.html">About</a>
     <a href="work.html">Work</a>
     <a href="life.html">Life</a>
   </nav>
 
-<div class="section">
-  <div class="left">
-    <h2>Photography</h2>
-    <p>
-      I like photography and also enjoy being in front of the camera. I love exploring new places and using my camera to capture everyday moments, turning them into lasting memories.
-    </p>
+  <h1>Life</h1>
+  <div class="subtitle">
+    Things I enjoy outside of research and coding
   </div>
-  <div class="right">
-    <figure>
-      <img src="photo1.jpg" alt="Photo 1" />
-      <figcaption>
-        <div><em>Irving Ramsey Wiles – The Sonata</em></div>
-        <div>September 29, 2024 · San Francisco</div>
-      </figcaption>
-    </figure>
-    <figure>
-      <img src="photo2jpg.jpg" alt="Photo 2" />
-      <figcaption>
-        <div><em>Golden hour light on campus</em></div>
-        <div>August 19, 2024 · Berkeley</div>
-      </figcaption>
-  </div> 
-</div> 
 
+  <div class="container">
 
-      <!-- Dance Section -->
-<div class="section">
-  <div class="left">
-    <h2>Dance</h2>
-    <p>
-      I’ve been dancing since kindergarten, starting with traditional folk and classical dance. These early experiences built my foundation in rhythm and movement. But it wasn’t until college that I discovered my true passion — Latin dance. I love its fast-paced rhythm, high-energy release, and the freedom to express myself fully on stage.
-    </p>
+    <div class="card">
+      <h2>Reading & Thinking</h2>
+      <p>
+        I enjoy reading broadly across economics, history, and social science, especially work that connects theory with real-world institutions. I’m particularly drawn to books and essays that explain why systems fail, how incentives shape behavior, and how policy interacts with human decision-making.
+      </p>
+    </div>
+
+    <div class="card">
+      <h2>Walking & Cities</h2>
+      <p>
+        I like walking through cities and paying attention to how neighborhoods change — housing density, public space, transportation, and small details that reflect deeper economic forces. This habit often feeds directly into how I think about urban policy and inequality.
+      </p>
+    </div>
+
+    <div class="card">
+      <h2>Sports & Staying Active</h2>
+      <p>
+        I enjoy staying active through casual sports and workouts. Physical routines help me stay disciplined and focused, especially during intense academic periods.
+      </p>
+    </div>
+
+    <div class="card">
+      <h2>Music</h2>
+      <p>
+        I listen to a wide range of music while working or thinking. I’m interested in how personal taste forms and how cultural preferences evolve over time — questions that overlap surprisingly well with data and modeling.
+      </p>
+    </div>
+
+    <div class="card">
+      <h2>Travel & Perspective</h2>
+      <p>
+        Having studied and lived in multiple countries, I value travel as a way to understand institutions, norms, and everyday life across different contexts. These experiences strongly shape how I approach comparative research questions.
+      </p>
+    </div>
+
   </div>
-  <div class="right">
-    <figure>
-      <img src="dance1.jpg" alt="Ballet Performance" />
-      <figcaption>
-        <div><em>Ballet showcase</em></div>
-      </figcaption>
-    </figure>
-    <figure>
-      <img src="dance2.jpg" alt="Latin Dance Performance" />
-      <figcaption>
-        <div><em>Latin dance performance</em></div>
-      </figcaption>
-    </figure>
-  </div>
-</div>
-
-
-</div>
 
 </body>
 </html>
