@@ -4,16 +4,19 @@
   <meta charset="UTF-8" />
   <title>About | Riza Serik</title>
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;800&display=swap" rel="stylesheet">
   <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
 
   <style>
     * { margin: 0; padding: 0; box-sizing: border-box; }
+
     body {
       font-family: 'Inter', sans-serif;
       background-color: #f8f9fa;
       color: #111;
     }
+
     nav {
       background-color: #f4f4f4;
       padding: 20px 40px;
@@ -25,87 +28,118 @@
       top: 0;
       z-index: 1000;
     }
+
     nav a {
       text-decoration: none;
       font-weight: 600;
       color: #222;
       font-size: 16px;
     }
+
     nav a:hover {
       opacity: 0.7;
     }
 
-    h1 {
-      text-align: center;
-      font-size: 36px;
-      margin: 50px 0 30px 0;
-      color: #111;
-    }
-
+    /* ===== HERO SECTION WITH BACKGROUND ===== */
     .container {
       display: flex;
       justify-content: space-between;
       align-items: center;
-      padding: 60px 80px;
+      padding: 110px 80px;
       flex-wrap: wrap;
+
+      background-image: url("view.JPG");
+      background-size: cover;
+      background-position: center;
+      background-repeat: no-repeat;
+
+      position: relative;
     }
+
+    /* Dark overlay */
+    .container::before {
+      content: "";
+      position: absolute;
+      inset: 0;
+      background: rgba(0, 0, 0, 0.45);
+      z-index: 0;
+    }
+
+    /* Bring content above overlay */
+    .container > * {
+      position: relative;
+      z-index: 1;
+    }
+
     .text {
       max-width: 50%;
       min-width: 300px;
+      color: #fff;
     }
+
     .text p {
       letter-spacing: 2px;
-      color: #b02a1f;
+      color: #ffd6cc;
       font-weight: 600;
       font-size: 14px;
       margin-bottom: 10px;
     }
+
     .text h2 {
       font-size: 40px;
       font-weight: 800;
       margin-bottom: 10px;
+      color: #fff;
     }
-    .text h3 {
-      font-weight: 400;
-      font-size: 20px;
-      color: #444;
-      margin-bottom: 30px;
-    }
+
     .icons a {
       margin-right: 16px;
       font-size: 22px;
-      color: #222;
+      color: #fff;
       transition: opacity 0.2s;
     }
+
     .icons a:hover {
       opacity: 0.7;
     }
+
+    .btn-group {
+      display: flex;
+      gap: 15px;
+      flex-wrap: wrap;
+    }
+
     .btn {
       padding: 12px 24px;
-      border: 2px solid #111;
+      border: 2px solid #fff;
       font-size: 14px;
       text-transform: uppercase;
       text-decoration: none;
       font-weight: 600;
-      color: #111;
+      color: #fff;
       transition: all 0.3s ease;
       display: inline-block;
       margin-top: 20px;
     }
+
     .btn:hover {
-      background-color: #111;
-      color: white;
+      background-color: #fff;
+      color: #111;
     }
+
     .photo img {
       max-width: 360px;
       border-radius: 12px;
-      box-shadow: 0 12px 24px rgba(0, 0, 0, 0.15);
+      box-shadow: 0 12px 24px rgba(0, 0, 0, 0.25);
     }
+
+    /* ===== LOWER CONTENT ===== */
     .summary {
       background-color: #fff;
       padding: 60px 80px;
       border-top: 1px solid #eee;
     }
+
     .intro-card {
       background-color: #f1f3f5;
       padding: 30px;
@@ -115,12 +149,14 @@
       line-height: 1.7;
       color: #333;
     }
+
     .summary h3 {
       font-size: 22px;
       margin-bottom: 15px;
       font-weight: 600;
       color: #111;
     }
+
     .summary ul {
       list-style: none;
       padding-left: 0;
@@ -128,41 +164,44 @@
       line-height: 1.7;
       color: #444;
     }
+
     .summary ul li {
       margin-bottom: 18px;
     }
+
     .company {
       font-weight: 700;
       color: #111;
     }
+
     .role {
       font-weight: 400;
       color: #444;
       font-size: 15px;
     }
-    .btn-group {
-      display: flex;
-      gap: 15px;
-      flex-wrap: wrap;
-    }
+
     @media (max-width: 900px) {
       .container {
         flex-direction: column;
-        padding: 40px 20px;
+        padding: 80px 20px;
         text-align: center;
       }
+
       .text, .photo {
         max-width: 100%;
       }
+
       .photo {
         margin-top: 40px;
       }
+
       .btn-group {
         justify-content: center;
       }
     }
   </style>
 </head>
+
 <body>
 
   <nav>
@@ -174,15 +213,18 @@
     <div class="text">
       <p>HELLO, I AM</p>
       <h2>Riza Serik</h2>
+
       <div class="icons">
         <a href="https://github.com/Riza622" target="_blank"><i class="fab fa-github"></i></a>
         <a href="mailto:ryzsrk@outlook.com"><i class="fas fa-envelope"></i></a>
       </div>
+
       <div class="btn-group">
         <a href="mailto:ryzsrk@outlook.com" class="btn">Contact Me</a>
         <a href="https://linkedin.com/in/riza-serik" class="btn" target="_blank">LinkedIn</a>
       </div>
     </div>
+
     <div class="photo">
       <img src="profile.jpg" alt="Riza Serik">
     </div>
