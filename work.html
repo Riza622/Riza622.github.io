@@ -35,7 +35,7 @@
       font-size: 16px;
     }
 
-    /* ---------- HERO (same as About) ---------- */
+    /* ---------- HERO ---------- */
     .hero {
       min-height: calc(100vh - 70px);
       display: flex;
@@ -49,7 +49,7 @@
       content: "";
       position: absolute;
       inset: 0;
-      background: rgba(0,0,0,0.35); /* dark overlay like About */
+      background: rgba(0,0,0,0.35);
     }
 
     .hero-content {
@@ -86,32 +86,10 @@
 
     /* ---------- PROJECT CARD ---------- */
     .card {
-      display: flex;
-      gap: 30px;
-      align-items: stretch;
       background: #fafafa;
-      padding: 26px 30px;
+      padding: 30px 36px;
       border-radius: 18px;
       box-shadow: 0 2px 12px rgba(0,0,0,0.06);
-    }
-
-    .img-col {
-      flex: 1;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-    }
-
-    .card img {
-      width: 100%;
-      max-width: 420px;
-      border-radius: 12px;
-      border: 1px solid #ddd;
-      box-shadow: 0 4px 8px rgba(0,0,0,0.05);
-    }
-
-    .text-col {
-      flex: 1.6;
     }
 
     .eyebrow {
@@ -140,6 +118,7 @@
       font-size: 15.5px;
       line-height: 1.85;
       color: #444;
+      max-width: 900px;
     }
 
     /* ---------- MOBILE ---------- */
@@ -150,14 +129,6 @@
 
       .hero-content p {
         text-align: left;
-      }
-
-      .card {
-        flex-direction: column;
-      }
-
-      .card img {
-        max-width: 100%;
       }
     }
   </style>
@@ -184,45 +155,30 @@
   <div class="stack">
 
     <div class="card">
-      <div class="img-col">
-        <img src="gender_gap_by_region.png" alt="Sales Amount by Region">
-      </div>
-      <div class="text-col">
-        <div class="eyebrow">Sales Amount by Region</div>
-        <h2>Gender Pay Gap in Livestreaming Industry</h2>
-        <hr class="divider">
-        <p>
-          I explored income inequality in livestream e-commerce using a dataset of over two million sessions. After cleaning the data and building regression models, I found that women, despite being more active on the platform, earned significantly less than men. The gap narrowed with more followers, livestreaming experience, and MCN (talent agency) support. I also discovered a “same-gender audience effect”: female influencers tend to attract more female viewers, which boosts their sales.
-        </p>
-      </div>
+      <div class="eyebrow">Sales Amount by Region</div>
+      <h2>Gender Pay Gap in Livestreaming Industry</h2>
+      <hr class="divider">
+      <p>
+        I explored income inequality in livestream e-commerce using a dataset of over two million sessions. After cleaning the data and building regression models, I found that women, despite being more active on the platform, earned significantly less than men. The gap narrowed with more followers, livestreaming experience, and MCN (talent agency) support. I also discovered a “same-gender audience effect”: female influencers tend to attract more female viewers, which boosts their sales.
+      </p>
     </div>
 
     <div class="card">
-      <div class="img-col">
-        <img src="conflict_myanmar_combined.png" alt="Myanmar Conflict Timeline and Maps">
-      </div>
-      <div class="text-col">
-        <div class="eyebrow">Myanmar Conflict Timeline and Maps</div>
-        <h2>Forecasting Political Violence in Myanmar</h2>
-        <hr class="divider">
-        <p>
-          I used Difference-in-Differences (DiD) to study how government interventions in religious and ethnic affairs can intensify conflict, focusing on the Rohingya crisis in Myanmar. Using Rakhine State as a case study, I found a post-2017 structural break in violence dynamics following the clearance operation.
-        </p>
-      </div>
+      <div class="eyebrow">Myanmar Conflict Timeline and Maps</div>
+      <h2>Forecasting Political Violence in Myanmar</h2>
+      <hr class="divider">
+      <p>
+        I used Difference-in-Differences (DiD) to study how government interventions in religious and ethnic affairs can intensify conflict, focusing on the Rohingya crisis in Myanmar. Using Rakhine State as a case study, I found a post-2017 structural break in violence dynamics following the clearance operation.
+      </p>
     </div>
 
     <div class="card">
-      <div class="img-col">
-        <img src="ca_price_decline_map.png" alt="California Housing Price Decline Map">
-      </div>
-      <div class="text-col">
-        <div class="eyebrow">California Housing Price Decline Map</div>
-        <h2>Displacement Risk and Housing Price Volatility</h2>
-        <hr class="divider">
-        <p>
-          Using ACS Census data and home price indices, I examined how rental patterns and housing price volatility interacted across California counties during the 2007–2009 crisis. Regions with larger price declines exhibited more unequal rental distributions, suggesting heightened displacement risk.
-        </p>
-      </div>
+      <div class="eyebrow">California Housing Price Decline Map</div>
+      <h2>Displacement Risk and Housing Price Volatility</h2>
+      <hr class="divider">
+      <p>
+        Using ACS Census data and home price indices, I examined how rental patterns and housing price volatility interacted across California counties during the 2007–2009 crisis. Regions with larger price declines exhibited more unequal rental distributions, suggesting heightened displacement risk.
+      </p>
     </div>
 
   </div>
