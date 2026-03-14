@@ -1,263 +1,256 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <title>About | Riza Serik</title>
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" /> 
+<meta charset="UTF-8">
+<title>About | Riza Serik</title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;800&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;800&display=swap" rel="stylesheet">
 
-  <style>
-    * {
-      margin: 0;
-      padding: 0;
-      box-sizing: border-box;
-    }
+<style>
 
-    body {
-      font-family: 'Inter', sans-serif;
-      background-color: #f8f9fa;
-      color: #111;
-    }
+*{
+margin:0;
+padding:0;
+box-sizing:border-box;
+}
 
-    /* ---------- NAV ---------- */
-    nav {
-      background-color: #ffffff;
-      padding: 18px 40px;
-      display: flex;
-      justify-content: center;
-      gap: 40px;
-      position: sticky;
-      top: 0;
-      z-index: 1000;
-      box-shadow: 0 1px 6px rgba(0,0,0,0.05);
-    }
+body{
+font-family:'Inter',sans-serif;
+background:#ffffff;
+color:#111;
+line-height:1.6;
+}
 
-    nav a {
-      text-decoration: none;
-      font-weight: 600;
-      color: #222;
-      font-size: 16px;
-    }
+nav{
+background:#ffffff;
+padding:18px 40px;
+display:flex;
+justify-content:center;
+gap:40px;
+position:sticky;
+top:0;
+z-index:1000;
+border-bottom:1px solid #eee;
+}
 
-    /* ---------- HERO ---------- */
-    .container {
-      min-height: calc(100vh - 70px);
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-      padding: 110px 80px;
-      flex-wrap: wrap;
-      background: url("view.JPG") center / cover no-repeat;
-      position: relative;
-    }
+nav a{
+text-decoration:none;
+font-weight:600;
+color:#222;
+font-size:16px;
+}
 
-    .container::before {
-      content: "";
-      position: absolute;
-      inset: 0;
-      background: rgba(0,0,0,0.35);
-    }
+.container{
+min-height:calc(100vh - 70px);
+display:flex;
+justify-content:space-between;
+align-items:center;
+padding:110px 80px;
+flex-wrap:wrap;
+background:#ffffff;
+}
 
-    .text,
-    .photo {
-      position: relative;
-      z-index: 2;
-    }
+.text{
+max-width:520px;
+}
 
-    /* ---------- LEFT TEXT ---------- */
-    .text {
-      max-width: 50%;
-      color: #fff;
-      margin-top: -40px;
-    }
+.text p:first-child{
+letter-spacing:2px;
+font-size:14px;
+color:#777;
+margin-bottom:12px;
+font-weight:600;
+}
 
-    .text p {
-      letter-spacing: 2px;
-      font-size: 14px;
-      color: #f2d6d3;
-      margin-bottom: 12px;
-      font-weight: 600;
-    }
+.text h2{
+font-size:44px;
+font-weight:800;
+margin-bottom:18px;
+}
 
-    .text h2 {
-      font-size: 44px;
-      font-weight: 800;
-      margin-bottom: 18px;
-    }
+.text p.bio{
+font-size:16px;
+color:#444;
+margin-bottom:28px;
+line-height:1.7;
+}
 
-    .text a {
-      color: #ffffff;
-      text-decoration: underline;
-      font-weight: 600;
-    }
+.text a{
+color:#000;
+font-weight:600;
+text-decoration:underline;
+}
 
-    /* ---------- ICONS ---------- */
-    .icons {
-      display: flex;
-      gap: 14px;
-    }
+.icons{
+display:flex;
+gap:14px;
+}
 
-    .icons a {
-      width: 46px;
-      height: 46px;
-      border: 2px solid #fff;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      transition: all 0.25s ease;
-    }
+.icons a{
+width:46px;
+height:46px;
+border:2px solid #222;
+display:flex;
+align-items:center;
+justify-content:center;
+transition:all .25s ease;
+}
 
-    .icons svg {
-      width: 20px;
-      height: 20px;
-      fill: #ffffff;
-    }
+.icons svg{
+width:20px;
+height:20px;
+fill:#222;
+}
 
-    .icons a:hover {
-      background-color: #ffffff;
-    }
+.icons a:hover{
+background:#222;
+}
 
-    .icons a:hover svg {
-      fill: #111;
-    }
+.icons a:hover svg{
+fill:#fff;
+}
 
-    /* ---------- PHOTO ---------- */
-    .photo {
-      margin-top: -40px;
-    }
+.photo img{
+max-width:260px;
+border-radius:12px;
+box-shadow:0 10px 30px rgba(0,0,0,.15);
+}
 
-    .photo img {
-      max-width: 280px;
-      border-radius: 14px;
-      box-shadow: 0 14px 30px rgba(0,0,0,0.35);
-    }
+.summary{
+background:#ffffff;
+padding:80px;
+border-top:1px solid #eee;
+}
 
-    /* ---------- SUMMARY ---------- */
-    .summary {
-      background-color: #ffffff;
-      padding: 80px;
-      border-top: 1px solid #eee;
-    }
+.summary h3{
+font-size:22px;
+margin-bottom:15px;
+font-weight:600;
+}
 
-    .summary h3 {
-      font-size: 22px;
-      margin-bottom: 15px;
-      font-weight: 600;
-    }
+.summary ul{
+list-style:none;
+font-size:16px;
+line-height:1.7;
+color:#444;
+margin-bottom:40px;
+}
 
-    .summary ul {
-      list-style: none;
-      font-size: 16px;
-      line-height: 1.7;
-      color: #444;
-      margin-bottom: 40px;
-    }
+.summary li{
+margin-bottom:18px;
+}
 
-    .summary li {
-      margin-bottom: 18px;
-    }
+.company{
+font-weight:700;
+}
 
-    .company {
-      font-weight: 700;
-    }
+.role{
+font-size:15px;
+color:#555;
+}
 
-    .role {
-      font-size: 15px;
-      color: #555;
-    }
+@media (max-width:900px){
 
-    /* ---------- MOBILE ---------- */
-    @media (max-width: 900px) {
-      .container {
-        flex-direction: column;
-        text-align: center;
-        padding: 80px 30px;
-      }
+.container{
+flex-direction:column;
+text-align:center;
+padding:80px 30px;
+}
 
-      .text {
-        max-width: 100%;
-        margin-top: 0;
-      }
+.text{
+max-width:100%;
+}
 
-      .icons {
-        justify-content: center;
-      }
+.icons{
+justify-content:center;
+}
 
-      .photo {
-        margin-top: 30px;
-      }
-    }
-  </style>
+.photo{
+margin-top:30px;
+}
+
+}
+
+</style>
 </head>
 
 <body>
 
-  <nav>
-    <a href="about.html">About</a>
-    <a href="work.html">Research</a>
-  </nav>
+<nav>
+<a href="about.html">About</a>
+<a href="work.html">Research</a>
+</nav>
 
-  <div class="container">
-    <div class="text">
-      <p>HELLO, I AM</p>
-      <h2>Riza Serik</h2>
+<div class="container">
 
-      <p style="letter-spacing: 0; font-size: 16px; color: #f8f9fa; margin-bottom: 28px; max-width: 520px; line-height: 1.6;">
-        I am a predoc at NYU Stern School of Business, my research focuses on applied microeconomics.
-        You can find more details about my work <a href="work.html">here</a>.
-      </p>
+<div class="text">
 
-      <div class="icons">
-        <!-- Email -->
-        <a href="mailto:ryzsrk@outlook.com" aria-label="Email">
-          <svg viewBox="0 0 24 24">
-            <path d="M2 4h20v16H2z M4 6l8 5 8-5"/>
-          </svg>
-        </a>
+<p>HELLO, I AM</p>
 
-        <!-- LinkedIn -->
-        <a href="https://www.linkedin.com/in/riza-serik-/" target="_blank" aria-label="LinkedIn">
-          <svg viewBox="0 0 24 24">
-            <path d="M4 3a2 2 0 100 4 2 2 0 000-4zm0 6h4v12H4zm6 0h4v2c.6-1 2-2 4-2 4 0 5 3 5 7v7h-4v-6c0-2 0-4-3-4s-3 2-3 4v6h-4z"/>
-          </svg>
-        </a>
+<h2>Riza Serik</h2>
 
-        <!-- X -->
-        <a href="https://x.com/RSaireke6471" target="_blank" aria-label="X">
-          <svg viewBox="0 0 24 24">
-            <path d="M3 3h4l5 7 6-7h4l-8 9 8 9h-4l-6-7-5 7H3l8-9z"/>
-          </svg>
-        </a>
-      </div>
-    </div>
+<p class="bio">
+I am a predoc at NYU Stern School of Business. My research focuses on applied microeconomics. 
+You can find more details about my work <a href="work.html">here</a>.
+</p>
 
-    <div class="photo">
-      <img src="Riza.jpg" alt="Riza Serik">
-    </div>
-  </div>
+<div class="icons">
 
-  <div class="summary">
-    <h3>Employment</h3>
-    <ul>
-      <li>
-        <div class="company">NYU Stern School of Business</div>
-        <div class="role">Junior Research Scientist (Predoc)</div>
-      </li>
-    </ul>
+<a href="mailto:ryzsrk@outlook.com" aria-label="Email">
+<svg viewBox="0 0 24 24">
+<path d="M2 4h20v16H2z M4 6l8 5 8-5"/>
+</svg>
+</a>
 
-    <h3>Education</h3>
-    <ul>
-      <li>
-        <div class="company">University of California, Berkeley</div>
-        <div class="role">M.S. in Computational Social Science</div>
-      </li>
-      <li>
-        <div class="company">Tsinghua University</div>
-        <div class="role">B.A. in Economics</div>
-      </li>
-    </ul>
-  </div>
+<a href="https://www.linkedin.com/in/riza-serik-/" target="_blank" aria-label="LinkedIn">
+<svg viewBox="0 0 24 24">
+<path d="M4 3a2 2 0 100 4 2 2 0 000-4zm0 6h4v12H4zm6 0h4v2c.6-1 2-2 4-2 4 0 5 3 5 7v7h-4v-6c0-2 0-4-3-4s-3 2-3 4v6h-4z"/>
+</svg>
+</a>
+
+<a href="https://x.com/RSaireke6471" target="_blank" aria-label="X">
+<svg viewBox="0 0 24 24">
+<path d="M3 3h4l5 7 6-7h4l-8 9 8 9h-4l-6-7-5 7H3l8-9z"/>
+</svg>
+</a>
+
+</div>
+
+</div>
+
+<div class="photo">
+<img src="Riza.jpg" alt="Riza Serik">
+</div>
+
+</div>
+
+<div class="summary">
+
+<h3>Employment</h3>
+
+<ul>
+<li>
+<div class="company">NYU Stern School of Business</div>
+<div class="role">Junior Research Scientist (Predoc)</div>
+</li>
+</ul>
+
+<h3>Education</h3>
+
+<ul>
+<li>
+<div class="company">University of California, Berkeley</div>
+<div class="role">M.S. in Computational Social Science</div>
+</li>
+
+<li>
+<div class="company">Tsinghua University</div>
+<div class="role">B.A. in Economics</div>
+</li>
+</ul>
+
+</div>
 
 </body>
 </html>
