@@ -65,6 +65,19 @@ inset:0;
 background:rgba(0,0,0,0.35);
 }
 
+/* PHOTO */
+
+.photo{
+position:relative;
+z-index:2;
+}
+
+.photo img{
+max-width:260px;
+border-radius:12px;
+box-shadow:0 10px 30px rgba(0,0,0,.35);
+}
+
 /* TEXT */
 
 .text{
@@ -91,7 +104,7 @@ margin-bottom:18px;
 .text p.bio{
 font-size:16px;
 color:#f5f5f5;
-margin-bottom:28px;
+margin-bottom:20px;
 line-height:1.7;
 }
 
@@ -106,6 +119,7 @@ text-decoration:underline;
 .icons{
 display:flex;
 gap:14px;
+margin-top:10px;
 }
 
 .icons a{
@@ -130,19 +144,6 @@ background:#fff;
 
 .icons a:hover svg{
 fill:#111;
-}
-
-/* PHOTO */
-
-.photo{
-position:relative;
-z-index:2;
-}
-
-.photo img{
-max-width:260px;
-border-radius:12px;
-box-shadow:0 10px 30px rgba(0,0,0,.35);
 }
 
 /* SUMMARY SECTION */
@@ -192,14 +193,11 @@ padding:80px 30px;
 
 .text{
 max-width:100%;
+margin-top:30px;
 }
 
 .icons{
 justify-content:center;
-}
-
-.photo{
-margin-top:30px;
 }
 
 }
@@ -216,6 +214,14 @@ margin-top:30px;
 
 <div class="container">
 
+<!-- PHOTO LEFT -->
+
+<div class="photo">
+<img src="Riza.jpg" alt="Riza Serik">
+</div>
+
+<!-- TEXT RIGHT -->
+
 <div class="text">
 
 <p>HELLO, I AM</p>
@@ -225,6 +231,10 @@ margin-top:30px;
 <p class="bio">
 I am a predoc at NYU Stern School of Business. My research focuses on applied microeconomics.
 You can find more details about my work <a href="work.html">here</a>.
+</p>
+
+<p class="bio">
+In my free time, I enjoy working out, dancing, and reading. Please feel free to reach out!
 </p>
 
 <div class="icons">
@@ -249,10 +259,6 @@ You can find more details about my work <a href="work.html">here</a>.
 
 </div>
 
-</div>
-
-<div class="photo">
-<img src="Riza.jpg" alt="Riza Serik">
 </div>
 
 </div>
